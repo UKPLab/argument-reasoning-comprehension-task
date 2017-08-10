@@ -1,0 +1,97 @@
+A224B7BAQ0MZSN, If an argument includes "Yes!", is that the entire explicit standpoint, or is the
+following reason ("Yes!  It causes bad things.") included in the explicit standpoint that I should click on?
+
++++ Only yes, no explanation why or reasoning!
+
+
+A224B7BAQ0MZSN, I would appreciate a few examples of how clearly in favor of one standpoint an argument
+has to be, or if a user should just use their best judgment based on implications in most cases.
+
+A224B7BAQ0MZSN, I am unsure of how much an author has to imply his opinion lies one way or another
+for me to select their standpoint.  I used my best judgment on the first question since it seemed
+like he favored Apple in his response, but I am not entirely sure he implied it was better heavily
+enough.  A few examples in the instructions might be good.
+
++++ add some examples?
+
+A224B7BAQ0MZSN, The first question seemed to agree with both standpoints, but favor one because the
+other was a weaker reason.  There is no option for "both", but it still seemed to take a stance, so
+I selected the slightly favored option.  I would appreciate something in the instructions noting what
+to do if the author favors both, but one more strongly - should I choose "no stance," or the more
+strongly favored stance?
+
++++ Add to guidelines: if the person favors both stances but tends to one, select the the more strongly favored stance
+
+A224B7BAQ0MZSN, I would suggest specifying if there is a limit to how many segments with the explicit
+standpoint can be selected, i.e. up to # of segments, or if all explicit segments can be selected.
+
++++ Add limit.. there's no limit, but usually there's either one explicit stance or none at all (very rarely twice)
+
+A224B7BAQ0MZSN, I think this HIT is very well-functioning and understandable.  The instructions
+could have the option to minimize/expand them to reduce screen clutter.
+
++++ HIDE instructions?
+
+A224B7BAQ0MZSN, The last question does not seem like the two presented standpoint options are
+completely related to the debate topic, unless they are borrowing heavily from implications instead
+of what the topic directly stated, so I was not sure about that one.
+
+
+
+Assignments completed: 50/50 (100%)
+-          Time elapsed: 0:56:34 (h:mm:ss)
+-   Average submit time: 174.0 seconds
+
+
+
+Workers:
+11 skipped because of unclear stance or problematic sentences by MACE score. [arg107492, arg18301, arg245304, arg281105, arg33141, arg346355, arg425174, arg453635, arg513277, arg569714, arg60992]
+29 arguments were annotated successfully
+
+Mine:
+2 skipped because of unclear stance or problematic sentences by MACE score. [arg208395, arg33312]
+38 arguments were annotated successfully
+
+
++++ TODO remove the nonsense button completely, it wasn't used as expected
+
+
+
+
+arg256316
+Harry Potter VS Lord of the Rings
+
+claim: S0I enjoyed the lord of the rings movies. S1They were amazing! --not claim, but reason
+
+S2The only Harry potter movie S3I watched S4were the half blood prince and deathly hallows part 1 and 2. claim: S5They were great S6but lord of the rings is better. S7In fact not too long ago I re S8watched it S9because I havent sen it in awhile S10and I ow all three of the movies
+
+
+
+Is the younger generation today more fortunate than their predecessors?
+
+claim: S0Young people are less fortunate than their predecessors S1because they have to face more stress now S2as compared to before. S3The
+-- not after because!!!
+
+
+Should Hillary Drop Out?
+
+S0There's a reason each state has its own primary - the only reason a candidate should 'drop out' before a convention is if there's absolutely no way they could get the number of delegates needed to secure the nomination.
+
+S1Clearly, large numbers of Democrats qould prefer Hillary over Obama. claim: S2There's no reason to disenfranchise them because he's presently ahead. S3If he had garnered the number of delegates required, then of course, but he hasn't.
+
+S4That's said without any bias toward one or the other.
+
+S5Now Ron Paul? S6It's time he faced the music.
+
+
+It's not saying yes!
+
+
+Are 3D TVs the way of the future?
+
+claim: S0Yes.
+
+S1Thats right.
+
+claim: S2And in fact some of the latest tvs' are already programed to accept that new upgrade of 3d S3that will be taking place .
+

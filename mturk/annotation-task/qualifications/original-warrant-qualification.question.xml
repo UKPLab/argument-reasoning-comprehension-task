@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2017
+  ~ Ubiquitous Knowledge Processing (UKP) Lab
+  ~ Technische Universität Darmstadt
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<QuestionForm
+        xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+    <Overview>
+        <Title>Correct an explanation to fix the logic of an argument</Title>
+
+        <!-- Here are the guidelines. Recommend keeping these short and crisp. -->
+        <Text>John Doe, a fictional person from a far away, wrote several arguments to controversial issues. His reasoning is broken as he explained reasons in his arguments so it looks like it actually implies the opposite of his standpoint.</Text>
+
+        <Text>Your task in this HIT batch will be to correct the explanation in order to fix the logical reasoning of the argument. This qualification will show you how to correctly fix the explanation.</Text>
+
+        <Text>Criteria for correcting the explanation properly:</Text>
+        <List>
+            <ListItem>Do only minimal changes in wording, casing, and punctuation, try to keep the original line of reasoning. It might only involve negation, indefinite pronouns, or similar.</ListItem>
+            <ListItem>The corrected explanation must make sense in the context of the argument.</ListItem>
+            <ListItem>Stay objective even if you strongly disagree with his views.</ListItem>
+            <ListItem>If you feel your edits would completely change the the line of reasoning, mark it as impossible and provide an explanation.</ListItem>
+        </List>
+    </Overview>
+
+
+    <Question>
+        <QuestionIdentifier>question1</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the properly corrected explanation (see the criteria above) of John Doe's argument; the argument is about vaccination:</Title>
+            <Text>The only acceptable exemption should be a legitimate medical reason, such as a vaccine allergy. And since ***[explanation] vaccines contain chemicals many children may be allergic to***, I claim that Vaccination should be mandatory for all children</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>vaccines contain many chemicals that children may be allergic to</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>vaccines don't contain chemicals many children may be allergic to</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>I would say it's impossible with the following explanation: shouldn't be mandatory</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>question2</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the properly corrected explanation (see the criteria above) of John Doe's argument; the argument is about salt at restaurants:</Title>
+            <Text>Salt is one of the best ways to enhance flavor.	And since ***[explanation] it is much more pious to eat a bland but nutritious diet***, I claim that Salt should have a place at the table</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>it is much more enjoyable to eat a flavorful but nutritious diet</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>it is not pious to eat a bland but nutritious diet</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>taste counts more than being pious</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>question3</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the properly corrected explanation (see the criteria above) of John Doe's argument; the argument is about companies and trust:</Title>
+            <Text>Companies laundered drug cartel money and made 8 billion and were only fined 4 billion for this. And since ***[explanation] the company admitted when they were guilty***, I claim that Companies can't be trusted</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>the companies admitted they were guilty</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>the company was guilty</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>the company denied that they were guilty</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>question4</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the properly corrected explanation (see the criteria above) of John Doe's argument; the argument is about comment sections in media:</Title>
+            <Text>Comment sections provide different views on opinion pieces. And since ***[explanation] different views detract from the main article***, I claim that Comment sections have not failed</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>different views detract from the main article</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>different views complement the main article</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>I would say it's impossible with the following explanation: it doesn't seem to be wrong</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>question5</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the properly corrected explanation (see the criteria above) of John Doe's argument; the argument is about taxing capital gains:</Title>
+            <Text>Without capital gains tax, the market would collapse. And since ***[explanation] the collapse of the market could possibly lead to better things***, I claim that Do not stop taxing capital gains</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>the collapse of the market could possibly lead to worse things</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>the collapse of the market could lead to better things</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>I would say it's impossible with the following explanation: Argument sounds fine</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>question6</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the properly corrected explanation (see the criteria above) of John Doe's argument; the argument is about extreme parenting:</Title>
+            <Text>Extreme parenting leads to undeveloped people without a sense of self. And since ***[explanation] the millennials have proved themselves to be abysmal failures in the school of Dr. Spock parenting***, I claim that Extreme parenting is counterproductive</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>the millennials have proved themselves to be abysmal failures</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>the millennials have proved themselves to be successfull examples in the school of Dr. Spock parenting</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>I would say it's impossible with the following explanation: true argument</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>question7</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the properly corrected explanation (see the criteria above) of John Doe's argument; the argument is about home-schooled children:</Title>
+            <Text>Sports can help home-schooled children improve their social skills. And since ***[explanation] There must be a few odd ducks in society***, I claim that Home-schoolers should play for high school teams</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>There shouldn't be any odd ducks in society</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>There must be a few in society</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>Remove the explanation completely, it is defamatory</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>question8</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the properly corrected explanation (see the criteria above) of John Doe's argument; the argument is about Iran:</Title>
+            <Text>Iran is more afraid of the US than the US should be afraid of them. And since ***[explanation] Nuclear weapons are a threat to every state around them.***, I claim that Iran doesn't remain a threat</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Nuclear weapons are not a threat to distant states.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>nuclear weapons are a threat to every state</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>I would say it's impossible with the following explanation: They are a threat based on argument</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <!--
+        <Question>
+            <QuestionIdentifier>question</QuestionIdentifier>
+            <IsRequired>true</IsRequired>
+            <QuestionContent>
+                <Title>Choose the properly corrected explanation (see the criteria above) of John Doe's argument; the argument is about :</Title>
+                <Text></Text>
+            </QuestionContent>
+            <AnswerSpecification>
+                <SelectionAnswer>
+                    <MinSelectionCount>1</MinSelectionCount>
+                    <StyleSuggestion>radiobutton</StyleSuggestion>
+                    <Selections>
+                        <Selection>
+                            <SelectionIdentifier>1</SelectionIdentifier>
+                            <Text></Text>
+                        </Selection>
+                        <Selection>
+                            <SelectionIdentifier>2</SelectionIdentifier>
+                            <Text></Text>
+                        </Selection>
+                        <Selection>
+                            <SelectionIdentifier>3</SelectionIdentifier>
+                            <Text></Text>
+                        </Selection>
+                    </Selections>
+                </SelectionAnswer>
+            </AnswerSpecification>
+        </Question>-->
+
+
+
+
+
+</QuestionForm>

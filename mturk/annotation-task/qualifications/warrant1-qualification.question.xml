@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2017
+  ~ Ubiquitous Knowledge Processing (UKP) Lab
+  ~ Technische Universität Darmstadt
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<QuestionForm
+		xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+	<Overview>
+		<Title>Choose the correct explanation why a claim of an argument is wrong</Title>
+
+		<!-- Here are the guidelines. Recommend keeping these short and crisp. -->
+        <Text>An argument consists of a claim and a reason. In the simplest form, an argument can be read as: "Reason, therefore Claim" (or "Claim because Reason")</Text>
+        <Text>In order to infer the claim from a reason, one needs a "bridge" - reasoning and logic that explains why the given reason supports the claim.</Text>
+        <Text>However, in these HITs we are interested in claims that are not logically implied by the reason. We call them incorrect claims (for instance, in an argument about taking an umbrella, the incorrect claim would be "We shouln't take the umbrella" given the reason "It's about to start raining").</Text>
+        <Text>Your task in the HITs will be to write an explaination why the incorrect claim does not follow the reason.</Text>
+        <Text>In his qualification test you will learn how a proper explanation should look like.</Text>
+		<Text>Criteria for a proper explanation:</Text>
+
+		<List>
+			<ListItem>The explanation fills the reasoning gap between the reason and the incorrect claim.</ListItem>
+			<ListItem>The explanation must relate to the content of the given reason.</ListItem>
+			<ListItem>The explanation does not simply repeat or rephrases what's already said in the reason.</ListItem>
+			<ListItem>The explanation is kept short and does not add necessary or distracting information.</ListItem>
+			<ListItem>The explanation avoids starting with "because" or "the person says" or similar and avoids pronouns if possible.</ListItem>
+		</List>
+
+	</Overview>
+
+
+	<Question>
+		<QuestionIdentifier>question1</QuestionIdentifier>
+		<IsRequired>true</IsRequired>
+		<QuestionContent>
+			<Title>Choose the proper explanation (see the criteria above) why the claim is incorrect given the reason; the argument is about grading colleges by the governmnet:</Title>
+            <Text>(Remember: "Reason, therefore Claim", which doesn't of course work for an incorrect claim)</Text>
+            <Text>Reason: "Rank-ordering colleges isn't necessary, because each would use the same standardized scale."</Text>
+			<Text>Incorrect claim: "Government should grade colleges"</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<MinSelectionCount>1</MinSelectionCount>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Standardized scale is working well.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>It's unnecessary to rank colleges since they'd all use the same scale.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+
+    <Question>
+        <QuestionIdentifier>question2</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) why the claim is incorrect given the reason; the argument is about allowing to have new employees sign noncompete deals:</Title>
+            <Text>(Remember: "Reason, therefore Claim", which doesn't of course work for an incorrect claim)</Text>
+            <Text>Reason: "Businesses shouldn't be able to stop employees from getting better deal when the businesses themselves try to get what's best for their business."</Text>
+            <Text>Incorrect claim: "Businesses should be allowed to have new employees sign noncompete deals"</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Businesses are only looking out for their best interest, therefore they should also allow employees the same privilege.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Businesses should also allow employees the same privilege.</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+
+    <Question>
+        <QuestionIdentifier>question3</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) why the claim is incorrect given the reason; the argument is about restaurant reservations for sale:</Title>
+            <Text>(Remember: "Reason, therefore Claim", which doesn't of course work for an incorrect claim)</Text>
+            <Text>Reason: "Everyone should pay the same for the same thing."</Text>
+            <Text>Incorrect claim: "Restaurant Reservations Should Be for Sale"</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>A restaurant who has on sale prices is not that popular</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>It is ethical that restaurants should offer equal treatment.</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>question4</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) why the claim is incorrect given the reason; the argument is about whether overcrowding is a legitimate threat:</Title>
+            <Text>(Remember: "Reason, therefore Claim", which doesn't of course work for an incorrect claim)</Text>
+            <Text>Reason: "There are limited resources available, and we must make sure that population doesn't outproduce the resources we have."</Text>
+            <Text>Incorrect claim: "Overcrowding is not a legitimate threat"</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>The reason is all about how there is limited resources</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>More people doesn't mean more people to produce more resources</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>question5</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) why the claim is incorrect given the reason; the argument is about forcing drug addicts into treatment:</Title>
+            <Text>(Remember: "Reason, therefore Claim", which doesn't of course work for an incorrect claim)</Text>
+            <Text>Reason: "Forcing a person to do something is never effective."</Text>
+            <Text>Incorrect claim: "Drug addicts should be forced into treatment"</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Effective methods are important for treatment</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>The person is stating that forcing someone to do something will not help their addiction</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>question6</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) why the claim is incorrect given the reason; the argument is about Brazil postponing the olympics:</Title>
+            <Text>(Remember: "Reason, therefore Claim", which doesn't of course work for an incorrect claim)</Text>
+            <Text>Reason: "The damage that the author warns about has already been inflicted."</Text>
+            <Text>Incorrect claim: "Brazil should postpone Olympics"</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>There is too much damage from the Olympics.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Postponing the Olympics would not undo the damage already done.</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <!--
+    <Question>
+        <QuestionIdentifier>question1</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) why the claim is incorrect given the reason; the argument is about :</Title>
+            <Text>(Remember: "Reason, therefore Claim", which doesn't of course work for an incorrect claim)</Text>
+            <Text>Reason: ""</Text>
+            <Text>Incorrect claim: ""</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text></Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text></Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>question1</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) why the claim is incorrect given the reason; the argument is about :</Title>
+            <Text>(Remember: "Reason, therefore Claim", which doesn't of course work for an incorrect claim)</Text>
+            <Text>Reason: ""</Text>
+            <Text>Incorrect claim: ""</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text></Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text></Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>question1</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) why the claim is incorrect given the reason; the argument is about :</Title>
+            <Text>(Remember: "Reason, therefore Claim", which doesn't work for an incorrect claim)</Text>
+            <Text>Reason: ""</Text>
+            <Text>Incorrect claim: ""</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text></Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text></Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    -->
+</QuestionForm>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2017
+  ~ Ubiquitous Knowledge Processing (UKP) Lab
+  ~ Technische Universität Darmstadt
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<QuestionForm
+		xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+	<Overview>
+		<Title>Choose the correct simplification of a reason in an argument</Title>
+
+		<!-- Here are the guidelines. Recommend keeping these short and crisp. -->
+		<Text>You will see several reasons in argument for different topics.</Text>
+		<Text>In this qualification you will learn what is a good simplification of a reason (so you can write them on your own later)</Text>
+		<Text>Criteria for a well-simplified reason</Text>
+
+		<List>
+			<ListItem>It rephrase and simplifies the reason so that it captures the its gist used in the argument.</ListItem>
+			<ListItem>It replaces pronouns (anaphora) with nouns or phrases they refer to, if it's clear from the context.</ListItem>
+			<ListItem>It does not explain any additional reasoning used in the argument.</ListItem>
+			<ListItem>It does not add any new evidence or information that is not included in the original reason.</ListItem>
+			<ListItem>It does not oversimplify too much.</ListItem>
+			<ListItem>It does not introduce another point of view.</ListItem>
+		</List>
+
+	</Overview>
+
+
+	<Question>
+		<QuestionIdentifier>question1</QuestionIdentifier>
+		<IsRequired>true</IsRequired>
+		<QuestionContent>
+			<Title>Choose the well-simplified reason gist in argument about college sport programs:</Title>
+			<Text>Original reason text (taken out of context): "The amounts RU has paid coaches and athletic directors is, frankly, obscene. That monstrosity of a stadium, built at a cost of $100 million, is obscene."</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<MinSelectionCount>1</MinSelectionCount>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>RU coaches are overpaid and the cost to build the stadium is $100 million.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>Sports programs cost an obscene amount of money to operate.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>question2</QuestionIdentifier>
+		<IsRequired>true</IsRequired>
+		<QuestionContent>
+			<Title>Choose the well-simplified reason gist in argument about college sport programs:</Title>
+			<Text>"Just giving up football - I'd add basketball, too - is a huge benefit."</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<MinSelectionCount>1</MinSelectionCount>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Dropping sports programs is a huge benefit.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>A huge benefit is to discontinue the football and basketball
+						</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>question3</QuestionIdentifier>
+		<IsRequired>true</IsRequired>
+		<QuestionContent>
+			<Title>Choose the well-simplified reason gist in argument about longer school days:</Title>
+			<Text>Original reason text (taken out of context): "Be it in school or at work... people need to be well rested with at least 8 hours of sleep to perform optimally."</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<MinSelectionCount>1</MinSelectionCount>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>The school day should not be longer, it is important for students to be well rested to start their day of knowledge.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>To ensure the best performance in school, students should receive 8 hours of sleep.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>question4</QuestionIdentifier>
+		<IsRequired>true</IsRequired>
+		<QuestionContent>
+			<Title>Choose the well-simplified reason gist in argument about longer school days:</Title>
+			<Text>Original reason text (taken out of context): "I know--with moral certainty--that so many people are underperformers (including me) when they don't get enough sleep."</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<MinSelectionCount>1</MinSelectionCount>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Many people, including me, underperform without an adequate amount of sleep.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>A longer school day would cut into the time students have available for sleep, and the lack of sleep would cause them to underperform.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>question5</QuestionIdentifier>
+		<IsRequired>true</IsRequired>
+		<QuestionContent>
+			<Title>Choose the well-simplified reason gist in argument about adequacy of chemical weapons middle-east wars:</Title>
+			<Text>Original reason text (taken out of context): "We don't know for sure whether chemical weapons have been used and if they were we don't know who used them. Not to mention the apparently minor point that attacking a country except in self-defense is illegal under international law."</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<MinSelectionCount>1</MinSelectionCount>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>The U.S. does not know for certain whether chemical weapons were used, and, if chemical weapons were used, the U.S. does not know whether the Assad regime was responsible or if another party used them. Additionally, it is illegal under international law to attack another country for reasons other than self defense.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>International law dictates that attacking a country except for self defense is illegal. Furthermore, there is no evidence that chemical weapons were used.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>question6</QuestionIdentifier>
+		<IsRequired>true</IsRequired>
+		<QuestionContent>
+			<Title>Choose the well-simplified reason gist in argument about vacations with or without kids:</Title>
+			<Text>Original reason text (taken out of context): "I would have been happier if my parents had left me at home for many of our vacations."</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<MinSelectionCount>1</MinSelectionCount>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Parents should consider vacationing without children, many children would be happier if they had a choice.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>I would have preferred to stay at home rather than go on a family vacation with my parents.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>question7</QuestionIdentifier>
+		<IsRequired>true</IsRequired>
+		<QuestionContent>
+			<Title>Choose the well-simplified reason gist in argument about taxing capital gains:</Title>
+			<Text>Original reason text (taken out of context): "From a strict economic viewpoint, all income should be taxed equally. This would avoid the huge incentives - and wasted, non-productive investments - in gaming the system, that firms and investors routinely make."</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<MinSelectionCount>1</MinSelectionCount>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Equality in taxed income would eliminate risky investment by firms and investors.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>Capital gains represents a form of income and should be taxed.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>question8</QuestionIdentifier>
+		<IsRequired>true</IsRequired>
+		<QuestionContent>
+			<Title>Choose the well-simplified reason gist in argument about the right of homeschooled children to take part in school sports:</Title>
+			<Text>Original reason text (taken out of context): "Showing up for practice and the games is only a small part of being a team player."</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<MinSelectionCount>1</MinSelectionCount>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>To be a team player requires more than participating in practice and games.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>There is more to being a team member than just practice and games - classroom and other activities are important as well.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>question9</QuestionIdentifier>
+		<IsRequired>true</IsRequired>
+		<QuestionContent>
+			<Title>Choose the well-simplified reason gist in argument about affirmative action:</Title>
+			<Text>Original reason text (taken out of context): "I have two friends who are African American. She is a physician, he is an engineer. Should their daughter get any advantage over a white kid who grew up in a trailer full of meth addicts in the Ozarks?"</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<MinSelectionCount>1</MinSelectionCount>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>Income should be taken into consideration for affirmative action not just race because there are wealthy minority individuals.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>It would be unfair for an African American child raised in economically stable conditions to receive an advantage over a white child born into poverty.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+	<Question>
+		<QuestionIdentifier>question10</QuestionIdentifier>
+		<IsRequired>true</IsRequired>
+		<QuestionContent>
+			<Title>Choose the well-simplified reason gist in argument about slave-trade repatriations:</Title>
+			<Text>Original reason text (taken out of context): "It would make as much sense for African Americans to seek reparations from the West African kingdoms that captured the slaves and sold them to European slavers."</Text>
+		</QuestionContent>
+		<AnswerSpecification>
+			<SelectionAnswer>
+				<MinSelectionCount>1</MinSelectionCount>
+				<StyleSuggestion>radiobutton</StyleSuggestion>
+				<Selections>
+					<Selection>
+						<SelectionIdentifier>1</SelectionIdentifier>
+						<Text>They should seek reparations from the West African kingdoms instead of the European slavers.</Text>
+					</Selection>
+					<Selection>
+						<SelectionIdentifier>2</SelectionIdentifier>
+						<Text>West African kingdoms that sold slaves to Europe have not paid reparations.</Text>
+					</Selection>
+				</Selections>
+			</SelectionAnswer>
+		</AnswerSpecification>
+	</Question>
+
+</QuestionForm>

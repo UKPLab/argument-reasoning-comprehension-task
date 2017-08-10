@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!--
+  ~ Copyright 2017
+  ~ Ubiquitous Knowledge Processing (UKP) Lab
+  ~ Technische Universität Darmstadt
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Find the main claim of the argument</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- annotation script -->
+    <script type="text/javascript" src="../javascript/annotation-logic.js"></script>
+    <!-- project-specific CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+
+
+<div class="container-fluid full-page">
+    <div class="row">
+        <div class="col-xs-6 col-md-3 masthead">
+            <h2>Find the main claim of the argument</h2>
+
+
+            <blockquote>
+                <strong>This study is currently in a testing phase!</strong> Help us to improve this HIT by giving us your feedback at the bottom of the page.
+            </blockquote>
+
+            <p>
+                <small>
+                    Dear Worker, thank you for your interest in our HITs! You are taking part in a large-scale research project conducted by the UKP Lab at the Technische Universität Darmstadt, Germany.
+                </small>
+            </p>
+
+            <h3>Task</h3>
+
+            <p>
+                There are 5 arguments in total in this HIT that are
+                <strong>completely independent</strong> of each other. Each deals with a different topic. For each argument there are
+                <strong>two tasks</strong> to be done.
+            </p>
+
+            <h4>First, choose author's overall standpoint towards the topic</h4>
+
+            <ul>
+                <li>Read the argument fist, make sure you understand it. Choose from the two opposing options offered. If neither of them apply (for example, if the argument does not even talk about the topic), choose the last option (<em>"The argument does not take a stance to the topic"</em>).
+                </li>
+            </ul>
+
+            <h4>Second, find and mark author's standpoint in text, if it is explicitly written</h4>
+
+            <ul>
+                <li>If the author takes stance on the topic, can you find whether the standpoint is mentioned in the text explicitly? If so, mark sentence or sentences that directly say so by <strong>clicking on them</strong>.</li>
+                <ul>
+                    <li>By
+                        <strong>explicit standpoint</strong> we mean that the sentence (or sentences) must be understandable on its own and it must clearly say what is the author's position.
+                    </li>
+                    <li>It is usually done by rephrasing the debate topic (for example: "Yes, cloning should be definitely abandoned").</li>
+                    <li>Using pronouns is also allowed (for example: "He was the best singer ever!" for the debate title "Was Frank Sinatra the best singer?")"</li>
+                    <li>Reasons explaining <strong>why</strong> the standpoint is taken, must <strong>not</strong> be marked.
+                        (for example: "He could sing anything!" is not the main standpoint for the debate title "Was Frank Sinatra the best singer?")"
+                    </li>
+                </ul>
+                <li>If the author's stance is not explicit (but you can infer it with your common sense), check the option
+                    <em>"I couldn't find author's standpoint explicitly written in the argument."</em>
+                </li>
+            </ul>
+
+
+            <p>
+                <small>By accepting this HIT, you agree that your submitted content will be licensed under Creative Commons CC0 (Public Domain) license.
+                    <br/>
+                    <strong>ATTENTION:</strong> The results will be processed by a state-of-the-art algorithm for detecting unreliable workers and checked manually for quality. Therefore it might take up to 7 days until the HITs are approved. Spammers and very low-quality assignments will be rejected.
+                </small>
+            </p>
+
+        </div>
+        <div class="col-xs-12 col-md-6">
+
+
+            <form name="mturk_form_name" id="mturk_form" method="post" action="https://www.mturk.com/mturk/externalSubmit">
+                <!-- the value will be injected by mturk-required-script.js -->
+                <input type="hidden" id="assignmentId" name="assignmentId" value=""/>
+
+                <!-- container for collected annotation results updated by javascript after each interactive action -->
+                <input type="hidden" id="collectedAnnotationResults" name="collectedAnnotationResults" value=""/>
+
+                <div class="argument-box">
+                    <div class="bg-success debate-title">
+                        <h3>
+                            <small>Debate topic:</small>
+                            CreateDebate Poll: Gun Laws <span class="small">I want to hear everyone&#39;s opinion. Don&#39;t worry I don&#39;t ban people for disagreeing with my opinion (Like some others).</span>
+                        </h3>
+                    </div>
+
+                    <div id="arg660265" class="argument">
+                        <span class="sentence" id="arg660265_0" data-position="0">Ban guns but actually ban them, only criminals having guns is indeed stupid.</span>
+                        <span class="sentence segment-not-allowed" id="arg660265_1" data-position="1">Banning should be done thoroughly making it near impossible to get hold of one.</span>
+                        <span class="sentence" id="arg660265_2" data-position="2">It has worked in Australia and Europe for many years but I understand that in USA it may not be so easy.</span>
+                        <span class="sentence segment-not-allowed" id="arg660265_3" data-position="3">Lorem ipsum.</span>
+
+                        <div class="alert alert-info tooltipbox" role="alert" style="margin: 2em;">
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                            <span class="tooltipText"></span>
+                        </div>
+
+                        <h4>Author's standpoint</h4>
+
+                        <div id="arg660265_stance_group" class="radio stanceGroup">
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg660265_stance_group" id="arg660265_stance_0" value="0" data-argumentid="arg660265">
+                                Keep Guns
+                            </label>
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg660265_stance_group" id="arg660265_stance_1" value="1" data-argumentid="arg660265">
+                                Ban Guns
+                            </label>
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg660265_stance_group" id="arg660265_stance_2" value="2" data-argumentid="arg660265">
+                                The argument does not take a stance to the topic
+                            </label>
+                        </div>
+
+
+                        <div id="arg660265_selectedSegments" class="selectedSegments" hidden="hidden">
+                            <h4>Selected segment(s) containing explicit standpoint</h4>
+                            <ul>
+
+                            </ul>
+
+
+                            <div class="checkbox optional-box">
+                                <label>
+                                    <input type="checkbox" id="arg660265_implicitStance" name="arg660265_implicitStance" class="implicitStance" data-argumentid="arg660265">
+                                    I couldn't find author's standpoint explicitly written in the argument.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="argument-box">
+                    <div class="bg-success debate-title">
+                        <h3>
+                            <small>Debate topic:</small>
+                            Is the world a better place without christians? <span class="small"></span>
+                        </h3>
+                    </div>
+
+                    <div id="arg119073" class="argument">
+                        <span class="sentence" id="arg119073_0" data-position="0">I&#39;m going to say yes, because the world would be a better place without the ignorance and barbarism that is religion in general.</span>
+                        <span class="sentence" id="arg119073_1" data-position="1">Having said that, the greatest threat to humanity in the present is undoubtedly Islam.</span>
+                        <span class="sentence" id="arg119073_2" data-position="2">If it comes down to us or them, as it looks more and more like it&#39;s going to, worrying about Christians when you have Muslims on your doorstep threatening to drag us all back to the stone age, would be like ignoring a bullet hole in your face while trying to pull a sliver out of your finger.</span>
+
+                        <div class="alert alert-info tooltipbox" role="alert" style="margin: 2em;">
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                            <span class="tooltipText"></span>
+                        </div>
+
+                        <h4>Author's standpoint</h4>
+
+                        <div id="arg119073_stance_group" class="radio stanceGroup">
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg119073_stance_group" id="arg119073_stance_1" value="1" data-argumentid="arg119073">
+                                yes
+                            </label>
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg119073_stance_group" id="arg119073_stance_0" value="0" data-argumentid="arg119073">
+                                Of Course Not
+                            </label>
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg119073_stance_group" id="arg119073_stance_2" value="2" data-argumentid="arg119073">
+                                The argument does not take a stance to the topic
+                            </label>
+                        </div>
+
+
+                        <div id="arg119073_selectedSegments" class="selectedSegments" hidden="hidden">
+                            <h4>Selected segment(s) containing explicit standpoint</h4>
+                            <ul>
+
+                            </ul>
+
+
+                            <div class="checkbox optional-box">
+                                <label>
+                                    <input type="checkbox" id="arg119073_implicitStance" name="arg119073_implicitStance" class="implicitStance" data-argumentid="arg119073">
+                                    I couldn't find author's standpoint explicitly written in the argument.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="argument-box">
+                    <div class="bg-success debate-title">
+                        <h3>
+                            <small>Debate topic:</small>
+                            Should steriods be aloud in sports <span class="small">Steriods have been killing and making people stronger over some time. People in sports use them to enhance there ability to play, and look bigger and scarier. And some people just take them for the effect of muscle build up. But some people don&#39;t know it makes ur penis shrink, and if u start using it, that it would be a bad idea to stop.</span>
+                        </h3>
+                    </div>
+
+                    <div id="arg35904" class="argument">
+                        <span class="sentence" id="arg35904_0" data-position="0">yeah,</span>
+                        <span class="sentence" id="arg35904_1" data-position="1">really, does anyone not in congress really care what these guys put in their body?</span>
+                        <span class="sentence" id="arg35904_2" data-position="2">They&#39;re adults, they choose to take a drug, they know the side effects, they weigh the risks,</span>
+                        <span class="sentence" id="arg35904_3" data-position="3">so who cares?</span>
+                        <span class="sentence" id="arg35904_4" data-position="4">and by the way, steroids don&#39;t shrink the penis, they shrink the balls, and who needs those anyway?</span>
+                        <span class="sentence" id="arg35904_5" data-position="5">reportedly steroids can actually make the male penis a little bigger,</span>
+                        <span class="sentence" id="arg35904_6" data-position="6">but once you get old, and stop taking the stuff, everything shrinks,</span>
+                        <span class="sentence" id="arg35904_7" data-position="7">including the penis.</span>
+
+                        <div class="alert alert-info tooltipbox" role="alert" style="margin: 2em;">
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                            <span class="tooltipText"></span>
+                        </div>
+
+                        <h4>Author's standpoint</h4>
+
+                        <div id="arg35904_stance_group" class="radio stanceGroup">
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg35904_stance_group" id="arg35904_stance_0" value="0" data-argumentid="arg35904">
+                                No they shouldn&#39;t
+                            </label>
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg35904_stance_group" id="arg35904_stance_1" value="1" data-argumentid="arg35904">
+                                Yes they should
+                            </label>
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg35904_stance_group" id="arg35904_stance_2" value="2" data-argumentid="arg35904">
+                                The argument does not take a stance to the topic
+                            </label>
+                        </div>
+
+
+                        <div id="arg35904_selectedSegments" class="selectedSegments" hidden="hidden">
+                            <h4>Selected segment(s) containing explicit standpoint</h4>
+                            <ul>
+
+                            </ul>
+
+
+                            <div class="checkbox optional-box">
+                                <label>
+                                    <input type="checkbox" id="arg35904_implicitStance" name="arg35904_implicitStance" class="implicitStance" data-argumentid="arg35904">
+                                    I couldn't find author's standpoint explicitly written in the argument.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="argument-box">
+                    <div class="bg-success debate-title">
+                        <h3>
+                            <small>Debate topic:</small>
+                            Arranged marriage anyone? <span class="small">Firstly - Arranged marriages are COMPLETELY DIFFERENT to FORCED MARRIAGES.&#10;Do not get that mixed up&#10;So... what are your thoughts??</span>
+                        </h3>
+                    </div>
+
+                    <div id="arg76194" class="argument">
+                        <span class="sentence" id="arg76194_0" data-position="0">Arranged marriages, forced marriages, all these marriages are morally wrong.</span>
+                        <span class="sentence" id="arg76194_1" data-position="1">Humanity needs to come together, not move apart, and these marriages are only advocating different social and racial groups.</span>
+                        <span class="sentence" id="arg76194_2" data-position="2">In addition to the cultural issue, these arranged marriages are forcing people to marry somebody that they never met before.</span>
+                        <span class="sentence" id="arg76194_3" data-position="3">In a world with such a high divorce rate, we do not need anymore people unhappy with each other.</span>
+
+                        <div class="alert alert-info tooltipbox" role="alert" style="margin: 2em;">
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                            <span class="tooltipText"></span>
+                        </div>
+
+                        <h4>Author's standpoint</h4>
+
+                        <div id="arg76194_stance_group" class="radio stanceGroup">
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg76194_stance_group" id="arg76194_stance_0" value="0" data-argumentid="arg76194">
+                                For It
+                            </label>
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg76194_stance_group" id="arg76194_stance_1" value="1" data-argumentid="arg76194">
+                                Against It
+                            </label>
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg76194_stance_group" id="arg76194_stance_2" value="2" data-argumentid="arg76194">
+                                The argument does not take a stance to the topic
+                            </label>
+                        </div>
+
+
+                        <div id="arg76194_selectedSegments" class="selectedSegments" hidden="hidden">
+                            <h4>Selected segment(s) containing explicit standpoint</h4>
+                            <ul>
+
+                            </ul>
+
+
+                            <div class="checkbox optional-box">
+                                <label>
+                                    <input type="checkbox" id="arg76194_implicitStance" name="arg76194_implicitStance" class="implicitStance" data-argumentid="arg76194">
+                                    I couldn't find author's standpoint explicitly written in the argument.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="argument-box">
+                    <div class="bg-success debate-title">
+                        <h3>
+                            <small>Debate topic:</small>
+                            should smoking be allowed in public <span class="small"></span>
+                        </h3>
+                    </div>
+
+                    <div id="arg93458" class="argument">
+                        <span class="sentence" id="arg93458_0" data-position="0">Yes, at least until people stop their dogs from farting in public, babies stop crying at the movies and rappers pull their pants up.</span>
+                        <span class="sentence" id="arg93458_1" data-position="1">It&#39;s not a matter for the &quot;public&quot; to decide for the individual.</span>
+                        <span class="sentence" id="arg93458_2" data-position="2">If somebody wants me to move my smelly cigar away from them I&#39;ll ask them to move their smelly butt away from me.</span>
+                        <span class="sentence" id="arg93458_3" data-position="3">Simple as that.</span>
+
+                        <div class="alert alert-info tooltipbox" role="alert" style="margin: 2em;">
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                            <span class="tooltipText"></span>
+                        </div>
+
+                        <h4>Author's standpoint</h4>
+
+                        <div id="arg93458_stance_group" class="radio stanceGroup">
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg93458_stance_group" id="arg93458_stance_1" value="1" data-argumentid="arg93458">
+                                yes
+                            </label>
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg93458_stance_group" id="arg93458_stance_0" value="0" data-argumentid="arg93458">
+                                No
+                            </label>
+                            <label style="margin-right: 10px">
+                                <input type="radio" name="arg93458_stance_group" id="arg93458_stance_2" value="2" data-argumentid="arg93458">
+                                The argument does not take a stance to the topic
+                            </label>
+                        </div>
+
+
+                        <div id="arg93458_selectedSegments" class="selectedSegments" hidden="hidden">
+                            <h4>Selected segment(s) containing explicit standpoint</h4>
+                            <ul>
+
+                            </ul>
+
+
+                            <div class="checkbox optional-box">
+                                <label>
+                                    <input type="checkbox" id="arg93458_implicitStance" name="arg93458_implicitStance" class="implicitStance" data-argumentid="arg93458">
+                                    I couldn't find author's standpoint explicitly written in the argument.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="feedback" style="margin-bottom: 20px;">
+
+                    <div class="form-group">
+                        <label for="feedback">Any constructive feedback on this HIT is much welcome</label>
+                        <input type="text" class="form-control" id="feedback"
+                               name="feedback"/>
+                    </div>
+
+                    <button type="submit" id="submitButton" name="Submit HIT"
+                            class="btn btn-primary"
+                            disabled="disabled">Submit HIT
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="../javascript/mturk-required-script.js"></script>
+</html>

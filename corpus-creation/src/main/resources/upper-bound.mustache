@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Choose the suitable reason to fill the gap in an argument</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- annotation script -->
+    <script type="text/javascript" src="../javascript/upper-bound.js"></script>
+    <!-- project-specific CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+
+
+<div class="container-fluid full-page">
+    <form name="mturk_form_name" id="mturk_form" method="post" action="{{mturkURL}}"
+          data-type="claim">
+        <!-- the value will be injected by mturk-required-script.js -->
+        <input type="hidden" id="assignmentId" name="assignmentId" value=""/>
+    <div class="row">
+        <div class="col-xs-6 col-md-3 masthead stance-background">
+
+            <div class="alert alert-warning tooltipbox" role="alert"
+                 style="margin: 2em; display: block;">
+                                <span class="glyphicon glyphicon-info-sign"
+                                      aria-hidden="true"></span>
+                You are only allowed to submit one HIT of this type. Submitting more HITs will
+                result into full rejection.
+            </div>
+
+
+            <h2>Choose the correct missing reasoning of an argument</h2>
+
+
+            <!--<blockquote>-->
+            <!--<strong>This study is currently in the testing phase!</strong> Help us to improve this HIT by giving us your feedback at the bottom of the page.-->
+            <!--</blockquote>-->
+
+            <p>
+                <small>
+                    Dear Worker, thank you for your interest in our HITs! You are taking part in a
+                    large-scale research project conducted by the UKP Lab at the Technische
+                    Universität Darmstadt, Germany.
+                </small>
+            </p>
+
+            <h3>Task</h3>
+
+            <p>
+                There are {{numberOfArguments}} incomplete arguments to various topics with a
+                <strong>gap</strong>.
+                Your task is to choose the explanation which better fits the logic of the argument.
+            </p>
+            <p>HINT: The incorrect option would usually lead to the <em>opposite</em> of the
+                claim.</p>
+
+
+            <h4>What is your highest completed level of school?</h4>
+            <div class="framed education-div">
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="education" id="education1" value="1">
+                        Less than high school degree </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="education" id="education2" value="2">
+                        High school degree or equivalent (e.g., GED)
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="education" id="education3" value="3">
+                        Some college but no degree
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="education" id="education4" value="4">
+                        Associate degree
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="education" id="education5" value="5">
+                        Bachelor degree
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="education" id="education6" value="6">
+                        Graduate degree or higher
+                    </label>
+                </div>
+            </div>
+
+
+            <h4>Have you had any formal training on logic, reasoning, or
+                critical thinking (including self-taught)?
+            </h4>
+            <div class="framed formal-training-div">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="training" id="training1" value="1">
+                        None</label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="training" id="training2" value="2">
+                        Some</label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="training" id="training3" value="3">
+                        Quite extensive</label>
+                </div>
+            </div>
+
+            <p>
+                <small>By accepting this HIT, you agree that your submitted content will be licensed
+                    under Creative Commons CC0 (Public Domain) license.
+                    <br/>
+                    <strong>ATTENTION:</strong> The results will be processed by a state-of-the-art
+                    algorithm for detecting unreliable workers and checked manually for quality.
+                    Therefore it might take up to 7 days until the HITs are approved. Spammers will
+                    be revealed and rejected.
+                </small>
+            </p>
+
+        </div>
+        <div class="col-xs-12 col-md-6">
+
+
+
+
+                {{#reasonClaimWarrantList}}
+                    <div class="argument-box">
+                        <div class="bg-success debate-title">
+                            <h3>
+                                <small>Debate question:</small>
+                                {{title}}
+                            </h3>
+                            <p>
+                                Additional info: {{description}}
+                            </p>
+                        </div>
+
+                        <div id="{{reasonClaimWarrantId}}" class="argument">
+                            <div class="sanity-check-box">Argument:</div>
+                            <div class="framed form-inline">
+                                <div style="padding-top: 1em; padding-right: 1em">
+                                    <p>
+                                        {{reasonGist}}
+                                        And since
+                                        <span id="{{reasonClaimWarrantId}}_selected_warrant_text"
+                                              class="selected-reason-text">...........</span> I
+                                        claim that {{annotatedStance}}
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <h4>Which reason fills the gap?</h4>
+
+                            <div id="{{reasonClaimWarrantId}}_original_reason_group"
+                                 class="stanceGroup">
+                                {{#validationWarrants}}
+                                    <div class="radio">
+                                        <label id="{{reasonClaimWarrantId}}_warrantOption_{{value}}_label"
+                                               style="margin-right: 10px">
+                                            <input type="radio"
+                                                   name="{{reasonClaimWarrantId}}_warrant_group"
+                                                   id="{{reasonClaimWarrantId}}_warrant_group_{{identifier}}"
+                                                   value="{{identifier}}"
+                                                   data-reasonid="{{reasonClaimWarrantId}}">
+                                            {{warrantText}}
+                                        </label>
+                                    </div>
+                                {{/validationWarrants}}
+                            </div>
+
+                            <div class="sanity-check-box">Are you familiar with the topic?</div>
+                            <div class="framed">
+                                <!--<h4>Are you familiar with the topic?</h4>-->
+                                <div id="{{reasonClaimWarrantId}}_familiarGroup" class="radio familiarGroup">
+                                    <label style="margin-right: 10px">
+                                        <input type="radio" name="{{reasonClaimWarrantId}}_familiarGroup"
+                                               id="{{reasonClaimWarrantId}}_familiarGroup_yes" value="yes"
+                                               data-argumentid="{{reasonClaimWarrantId}}">
+                                        I'm rather <strong>familiar</strong> with the topic
+                                    </label>
+                                    <label style="margin-right: 10px">
+                                        <input type="radio" name="{{reasonClaimWarrantId}}_familiarGroup"
+                                               id="{{reasonClaimWarrantId}}_familiarGroup_somewhat"
+                                               value="somewhat" data-argumentid="{{reasonClaimWarrantId}}">
+                                        I'm <strong>somewhat familiar</strong> with the topic
+                                    </label>
+                                    <label style="margin-right: 10px">
+                                        <input type="radio" name="{{reasonClaimWarrantId}}_familiarGroup"
+                                               id="{{reasonClaimWarrantId}}_familiarGroup_no" value="no"
+                                               data-argumentid="{{reasonClaimWarrantId}}">
+                                        I'm rather <strong>unfamiliar</strong> with the topic
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/reasonClaimWarrantList}}
+
+                <div class="feedback" style="margin-bottom: 20px;">
+
+                    <div class="form-group">
+                        <label for="feedback">Any constructive feedback on this HIT is much
+                            welcome</label>
+                        <input type="text" class="form-control" id="feedback"
+                               name="feedback"/>
+                    </div>
+
+                    <button type="submit" id="submitButton" name="Submit HIT"
+                            class="btn btn-primary"
+                            disabled="disabled">Submit HIT
+                    </button>
+
+                </div>
+
+        </div>
+    </div>
+    </form>
+</div>
+</body>
+<script type="text/javascript" src="../javascript/mturk-required-script.js"></script>
+</html>

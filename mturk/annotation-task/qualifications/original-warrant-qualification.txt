@@ -1,0 +1,52 @@
+The only acceptable exemption should be a legitimate medical reason, such as a vaccine allergy. And since ***[explanation] vaccines contain chemicals many children may be allergic to***, I claim that Vaccination should be mandatory for all children
+
+x vaccines contain many chemicals that children may be allergic to
+* vaccines don't contain chemicals many children may be allergic to
+x I would say it's impossible with the following explanation: shouldn't be mandatory
+
+
+Salt is one of the best ways to enhance flavor.	And since ***[explanation] it is much more pious to eat a bland but nutritious diet***, I claim that Salt should have a place at the table
+
+* it is much more enjoyable to eat a flavorful but nutritious diet
+x it is not pious to eat a bland but nutritious diet
+x taste counts more than being pious
+
+
+Companies laundered drug cartel money and made 8 billion and were only fined 4 billion for this when they admitted they were guilty. And since ***[explanation] the company admitted when they were guilty***, I claim that Companies can't be trusted
+
+x the companies admitted they were guilty
+x the company was guilty
+* the company denied that they were guilty
+
+
+Comment sections provide different views on opinion pieces. And since ***[explanation] different views detract from the main article***, I claim that Comment sections have not failed
+
+x different views detract from the main article
+* different views complement the main article
+x I would say it's impossible with the following explanation: it doesn't seem to be wrong
+
+
+
+Without capital gains tax, the market would collapse. And since ***[explanation] the collapse of the market could possibly lead to better things***, I claim that Do not stop taxing capital gains
+* the collapse of the market could possibly lead to worse things
+x the collapse of the market could lead to better things
+x I would say it's impossible with the following explanation: Argument sounds fine
+
+
+
+Extreme parenting leads to undeveloped people without a sense of self. And since ***[explanation] the millennials have proved themselves to be abysmal failures in the school of Dr. Spock parenting***, I claim that Extreme parenting is counterproductive
+x the millennials have proved themselves to be abysmal failures
+* the millennials have proved themselves to be successfule examples in the school of Dr. Spock parenting
+x I would say it's impossible with the following explanation: true argument
+
+
+Sports can help home-schooled children improve their social skills. And since ***[explanation] There must be a few odd ducks in society***, I claim that Home-schoolers should play for high school teams
+* There shouldn't be any odd ducks in society
+x There must be a few in society
+x Remove the explanation completely, it is defamatory.
+
+
+Iran is more afraid of the US than the US should be afraid of them. And since ***[explanation] Nuclear weapons are a threat to every state around them.***, I claim that Iran doesn't remain a threat
+* Nuclear weapons are not a threat to distant states.
+x nuclear weapons are a threat to every state
+x I would say it's impossible with the following explanation: They are a threat based on argument

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Warrants</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- annotation script -->
+    <script type="text/javascript" src="../javascript/annotation-logic-reason-disambiguation.js"></script>
+    <!-- project-specific CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+
+
+<div class="container-fluid full-page">
+    <div class="row">
+        <div class="col-xs-6 col-md-3 masthead reason-disambiguation">
+
+            <h2>Choose the most likely implied conclusion in an argument</h2>
+
+            <p>This HIT requires logical thinking and common-sense reasoning!</p>
+
+            <!--<blockquote>-->
+            <!--<strong>This study is currently in a testing phase!</strong> Help us to improve this-->
+            <!--HIT by giving us your feedback at the bottom of the page.-->
+            <!--</blockquote>-->
+
+            <p>
+                <small>
+                    Dear Worker, thank you for your interest in our HITs! You are taking part in a
+                    large-scale research project conducted by the UKP Lab at the Technische
+                    Universität Darmstadt, Germany.
+                </small>
+            </p>
+
+
+            <!--<h3>What is an argument?</h3>-->
+            <!--<p>An argument consists of a-->
+                <!--<strong>claim</strong>-->
+                <!--and a <strong>reason</strong>. In the simplest form, an argument can be read as:-->
+                <!--"Reason, therefore Claim" (or "Claim because Reason")-->
+            <!--</p>-->
+            <!--<p>In order to infer the claim from a reason, one needs a "bridge" - reasoning and logic-->
+                <!--that explains why the given reason supports the claim.</p>-->
+            <!--<p>However, in these HITs we are interested in claims that are <strong>not</strong>-->
+                <!--logically implied by the reason. We call them <strong>incorrect claims</strong>-->
+            <!--</p>-->
+            <!--<ul>-->
+                <!--<li>For-->
+                    <!--instance, in an argument about taking an umbrella, the incorrect claim would be "We-->
+                    <!--shouldn't take the umbrella" given the reason "It's about to start raining").-->
+                <!--</li>-->
+            <!--</ul>-->
+
+            <h3>Your task</h3>
+
+            <p>You see {{numberOfArguments}} different controversial topics.
+            For each of the topic, there is a <strong>reason</strong> given in an argument.</p>
+            <p>Your task it to select the <strong>most likely conclusion that is implied by the reason</strong>.</p>
+
+            <p>The last option should only be applied if the reason rephrases the displayed text.
+            Rephrasing means it says either exactly the same, or says pretty much the same using other wording, but you don't need common-sense reasoning.
+            <ul>
+                <li><strong>Example</strong>
+                    <br/>
+                    Reason: "Vaccinations should not be mandatory because they have mercury", conclusion "Vaccination should not be mandatory for all children". These both say pretty much the same in the context of the debate topic.
+                    <br/>
+                    &rarr; <strong>select the last option</strong>
+                </li>
+                <li><strong>Counter-example</strong>
+                    <br/>
+                    Reason: "Entertainment matters.", Conclusion: "Rock Hall of Fame matters". They talk about different things and need common-sense reasoning to imply that the conclusion follows the reason.
+                    <br/>
+                    &rarr; <strong>do not select the last option</strong>
+                </li>
+            </ul>
+
+
+            <p>
+                <small>By accepting this HIT, you agree that your submitted content will be licensed
+                    under Creative Commons CC0 (Public Domain) license.
+                    <br/>
+                    <strong>ATTENTION:</strong> The results will be processed by a state-of-the-art
+                    algorithm for detecting unreliable workers and checked manually for quality.
+                    Therefore it might take up to 7 days until the HITs are approved. Spammers and
+                    obvious very low-quality assignments might get rejected.
+                </small>
+            </p>
+
+        </div>
+        <div class="col-xs-12 col-md-6">
+
+
+            <form name="mturk_form_name" id="mturk_form" method="post" action="{{mturkURL}}"
+                  data-type="reasons">
+                <!-- the value will be injected by mturk-required-script.js -->
+                <input type="hidden" id="assignmentId" name="assignmentId" value=""/>
+
+                {{#arguments}}
+                    <div class="argument-box">
+                        <div class="bg-success debate-title">
+                            <h4>
+                                Debate topic: <strong>{{title}}</strong>
+                            </h4>
+                            <p>
+                                Additional info: {{description}}
+                            </p>
+                        </div>
+
+                        <div id="{{reasonId}}" class="argument">
+                            <p>This is the <strong>reason</strong> given in an argument:</p>
+
+                            <div class="framed">
+                                <p class="provided-reason-text">{{reasonText}}</p>
+                            </div>
+                            <p>
+                                Using your common-sense reasoning, which conclusion is <strong>most likely implied by the reason</strong>?
+                            </p>
+
+                            <div id="{{reasonId}}_stance_group">
+                                {{#stances}}
+                                    <div class="radio">
+                                        <label style="margin-right: 10px">
+                                            <input type="radio" name="{{reasonId}}_stance_group"
+                                                   id="{{reasonId}}_stance_{{stanceValue}}"
+                                                   value="{{stanceValue}}"
+                                                   data-reasonid="{{reasonId}}">
+                                            {{stanceText}}
+                                        </label>
+                                    </div>
+                                {{/stances}}
+                            </div>
+
+                            <!--<p>-->
+                                <!--<strong>Why</strong> is the claim-->
+                                <!--<strong>incorrect</strong> given the reason above?-->
+                            <!--</p>-->
+                            <!--<input type="text" class="form-control"-->
+                                   <!--id="{{reasonId}}_opposingStance_warrant"-->
+                                   <!--name="{{reasonId}}_opposingStance_warrant"-->
+                                   <!--placeholder="Write an explanation here..." style="width: 50em;">-->
+
+
+                            <!--<div class="sanity-check-box">John Doe argues:</div>-->
+                            <!--<div class="framed">-->
+                            <!--<p>-->
+                            <!--{{opposingStance}}-->
+                            <!--<strong>because</strong>-->
+                            <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="form-group">-->
+                            <!--<label for="{{reasonId}}_opposingStance_warrant">John thinks that ...</label>-->
+                            <!--<textarea class="form-control" rows="3" id="{{reasonId}}_opposingStance_warrant"-->
+                            <!--name="{{reasonId}}_opposingStance_warrant"></textarea>-->
+                            <!--</div>-->
+
+
+                            <!--<div class="alert alert-info tooltipbox" role="alert"-->
+                                 <!--style="margin: 2em; display: block;">-->
+                                <!--<span class="glyphicon glyphicon-info-sign"-->
+                                      <!--aria-hidden="true"></span>-->
+                                <!--<span class="tooltipText">A <strong>proper explanation</strong> ...</span>-->
+                                <!--<ul>-->
+                                    <!--<li>... fills the reasoning gap between the reason and the incorrect claim.</li>-->
+                                    <!--<li>... must relate to the content of the given reason and claim.</li>-->
+                                    <!--<li>... does not simply repeat or rephrases what's already said in the reason.</li>-->
+                                    <!--<li>... is kept short without necessary or distracting information.</li>-->
+                                    <!--<li>... avoids starting with "because" or "the person says" or similar and avoids pronouns if possible.</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+
+                            <!--<p>If you are sure you can't make any sense out of it, select the following option (in the worst case only):</p>-->
+
+                            <!--<div class="checkbox optional-box">-->
+                                <!--<label>-->
+                                    <!--<input type="checkbox" id="{{reasonId}}_opposingStance_warrant_impossible" name="{{reasonId}}_opposingStance_warrant_impossible" class="implicitStance" data-reasonid="{{reasonId}}">-->
+                                    <!--No explanation was needed and it was very easy because the reason says explicitly and exactly the opposite of the incorrect claim.-->
+                                <!--</label>-->
+                            <!--</div>-->
+
+                            <!--<div class="alert alert-info tooltipbox" role="alert"-->
+                                 <!--style="margin: 2em; display: block;">-->
+                                <!--<span class="glyphicon glyphicon-info-sign"-->
+                                      <!--aria-hidden="true"></span>-->
+                                <!--<span class="tooltipText">-->
+                                    <!--For example if the reason would read <em>"Writing can be assessed with style guidelines."</em> and the incorrect claim <em>"Writing cannot be assessed"</em>. It needs no further explanation.-->
+                                <!--</span>-->
+                            <!--</div>-->
+
+
+                            <!--<div class="sanity-check-box">Are you familiar with the topic?</div>-->
+                            <!--<div class="framed">-->
+                            <!--<h4>Are you familiar with the topic?</h4>-->
+                            <!--<div id="{{reasonId}}_familiarGroup" class="radio familiarGroup">-->
+                            <!--<label style="margin-right: 10px">-->
+                            <!--<input type="radio" name="{{reasonId}}_familiarGroup"-->
+                            <!--id="{{reasonId}}_familiarGroup_yes" value="yes"-->
+                            <!--data-reasonid="{{reasonId}}">-->
+                            <!--I'm rather <strong>familiar</strong> with the topic-->
+                            <!--</label>-->
+                            <!--<label style="margin-right: 10px">-->
+                            <!--<input type="radio" name="{{reasonId}}_familiarGroup"-->
+                            <!--id="{{reasonId}}_familiarGroup_somewhat"-->
+                            <!--value="somewhat" data-argumentid="{{reasonId}}">-->
+                            <!--I'm <strong>somewhat familiar</strong> with the topic-->
+                            <!--</label>-->
+                            <!--<label style="margin-right: 10px">-->
+                            <!--<input type="radio" name="{{reasonId}}_familiarGroup"-->
+                            <!--id="{{reasonId}}_familiarGroup_no" value="no"-->
+                            <!--data-reasonid="{{reasonId}}">-->
+                            <!--I'm rather <strong>unfamiliar</strong> with the topic-->
+                            <!--</label>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+                        </div>
+                    </div>
+                {{/arguments}}
+
+                <div class="feedback" style="margin-bottom: 20px;">
+
+                    <div class="form-group">
+                        <label for="feedback">Any constructive feedback on this HIT is much
+                            welcome</label>
+                        <input type="text" class="form-control" id="feedback"
+                               name="feedback"/>
+                    </div>
+
+                    <button type="submit" id="submitButton" name="Submit HIT"
+                            class="btn btn-primary"
+                            disabled="disabled">Submit HIT
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="../javascript/mturk-required-script.js"></script>
+</html>

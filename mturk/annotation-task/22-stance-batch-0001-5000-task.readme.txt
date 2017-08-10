@@ -1,0 +1,41 @@
+First check after 30% were done:
+
+Bonus:
+A104V8NZIQFN2F	0,863	3X08E93BHWUKTIQBG6HBO25QPPM66M	36U4VBVNQOPVVSH3EADARJEIALBRUO	32
+A33UYI13KZ5U1	0,668	31N2WW6R9S2HFSW4YXMHB56J8YTF30	3HEADTGN2P4V8763J0NFN5G1OSKRVD	49
+A2U31V169A20GY	0,645	3R6P78PK7LNSS9QTOWYQB3AT3CHTG5	3RTFSSG7T8IXKYBV4QVFNVQGP9XWL2	124	133	579	50	91
+
+Thanks for your submitted HITs, your answers were well above average. Any feedback on TurkOpticon will be appreciated. Thanks, Ivan
+
+
+Send warning:
+
+AB98SGS280TY5	0,294	A	3K3R2QNK8CFSDCIAAVIQOIA8IDI9UA	37YYO3NWHD2V3WBKAM2F8ITQ3K1CCT	151	141	873	22	164
+A2QESH8UT6H702	0,86		3FE7TXL1LJZPLZQU8DJ64U559M32Q7	3XD2A6FGFN69CFTDVOIOLXW0J2KS9M	3	50	81	20	31
+A3P4W6EQTLRVK5	0,652		345LHZDEDY46YATUTMHGX57MIL1U37	3RIHDBQ1NEAZTQYR93AUM5VIAQAHMP	102	80	383	24	40
+A13C6OXFS0EENC	0,801		37C0GNLMHGFJER5QQTPPU8FI6BH6DM
+
+Dear worker, thanks for submitting your HITs. I found out that some HITs took you less than 30 seconds to answer, which is a strong signal of not reading the text properly and randomly providing answers. Please, take it as a warning.
+
+
+Spammers:
+
+A2KG55NBXU73BF	0,003		3X87C8JFV7NIQY7S2SYCVCI97FYQSS	3RKHNXPHGW898O48OQ4DQ7S4FTHKUO	1	69	69	69	0
+
+Dear worker, the answers you provided looked just random and the submission time (only 69 seconds) is a strong signal of not reading the text properly. I'm sorry but we have to reject your work to keep up our quality.
+
+
+Final done:
+
+Bonus
+A2U31V169A20GY 0,713	3R6P78PK7LNSS9QTOWYQB3AT3CHTG5	3RTFSSG7T8IXKYBV4QVFNVQGP9XWL2	287	135	627	50	90
+A104V8NZIQFN2F	0,78	3X08E93BHWUKTIQBG6HBO25QPPM66M	36U4VBVNQOPVVSH3EADARJEIALBRUO	133	221	877	57	113
+A2W1C5PDHUF25O	0,708	3P59JYT76MW2DFIMPHD19ZGSUV6T2L	3DTJ4WT8BDRN8N68YRSI94UEXE0ZE8	127
+
+Thanks for your submitted HITs, your answers were well above average. Any feedback on TurkOpticon will be appreciated. Thanks, Ivan
+
+
+Strong warning
+AB98SGS280TY5 0,173	A;S	3KV0LJBBH3XF449NVARQOTT8BEPMRO	3RTFSSG7T8IXKYBV4QVFNVQGP9XWL2	653	108	889	12	152
+
+Dear worker, thanks for submitting your HITs. Some HITs took you less then 15 seconds to answer, which is a strong signal of not reading the text at all and randomly providing answers. Please, take it as a strong warning - next time the whole batch of your HITs will be rejected if this behavior repeats.

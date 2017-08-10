@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2017
+  ~ Ubiquitous Knowledge Processing (UKP) Lab
+  ~ Technische Universität Darmstadt
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<QuestionForm
+        xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+    <Overview>
+        <Title>Choose the proper fabricated explanation of weird reasoning in arguments</Title>
+
+        <!-- Here are the guidelines. Recommend keeping these short and crisp. -->
+        <Text>John Doe, a fictive person from a far away, wrote several arguments to controversial issues. His reasoning is really weird, so it looks like he actually gives reasons against his standpoint.</Text>
+
+        <Text>Your task in this HIT batch will be to fill the gap and write down John's reasoning so his argument makes sense. This qualification will show you how a proper explanation must look like.</Text>
+
+        <Text>Of course, since John's reasoning is based on different commonsense knowledge, most of the explanation are fabricated. But the goal is to keep them as believable and relevant as possible.</Text>
+
+        <Text>Criteria for a proper explanation:</Text>
+
+        <List>
+            <ListItem>The explanation must relate to the content of the given reason and claim and actually explain the reasoning.</ListItem>
+            <ListItem>The explanation does not simply repeat or rephrases what's already said in the reason.</ListItem>
+            <ListItem>The explanation is kept short without necessary or distracting information.</ListItem>
+            <ListItem>The explanation avoids starting with "because", "the person says", "John says" or similar and avoids pronouns if possible.</ListItem>
+        </List>
+    </Overview>
+
+
+    <Question>
+        <QuestionIdentifier>question1</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) of John Doe's reasoning; the argument is about marijuana as a gateway drug:</Title>
+            <Text>Many patients have identified cannabis as an effective and safer alternative to their prescription drugs. And since [...explanation...], I claim that Marijuana is a gateway drug.</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>many patients taking marijuana as an alternative medication are also hardcore drug users</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>cannabis is classified as a drug</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+
+    <Question>
+        <QuestionIdentifier>question2</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) of John Doe's reasoning; the argument is about marijuana as a gateway drug:</Title>
+            <Text>I would have done hard drugs and died over 20 years ago. And since [...explanation...], I claim that Marijuana is a gateway drug.</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>I'm posting this argument from the afterlife</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>the person says he has never used marijuana</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>question3</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) of John Doe's reasoning; the argument is about humanities programs in colleges:</Title>
+            <Text>Students need to think critically and outside of conventional ideas. And since [...explanation...], I claim that Colleges do not need humanities programs</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>most people have traditional majors: business, education, etc.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>humanities programs do not teach critical thinking</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>question4</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) of John Doe's reasoning; the argument is about veganism good for anyone:</Title>
+            <Text>I couldn't think straight without dairy products. And since [...explanation...], I claim that Veganism is good for everyone</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>people don't need to think clearly to function</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>the milk causes an unhealthy dependence, along with other animal products</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <Question>
+        <QuestionIdentifier>question5</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) of John Doe's reasoning; the argument is about patenting genes by companies:</Title>
+            <Text>The human blueprint is part of the natural world and was not created by mankind. And since [...explanation...], I claim that Companies should be allowed to patent genes</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>it is not man made, there can be no one owner to such a thing</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>many other natural things are also patented</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <!--
+    <Question>
+        <QuestionIdentifier>questionX</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the proper explanation (see the criteria above) of John Doe's reasoning; the argument is about :</Title>
+            <Text> And since [...explanation...], I claim that</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text></Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text></Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    -->
+
+
+</QuestionForm>

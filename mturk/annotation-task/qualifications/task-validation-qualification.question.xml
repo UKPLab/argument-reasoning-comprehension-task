@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2017
+  ~ Ubiquitous Knowledge Processing (UKP) Lab
+  ~ Technische Universität Darmstadt
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<QuestionForm
+        xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+    <Overview>
+        <Title>Choose the correct missing reasoning of an argument</Title>
+
+        <!-- Here are the guidelines. Recommend keeping these short and crisp. -->
+        <Text>There are several incomplete arguments to various topics with a gap.</Text>
+        <Text>Your task is to choose the logically correct explanation of reasoning.</Text>
+        <Text>If none of the two first option makes sense, select the third option.</Text>
+        <Text>Some of them are tricky and need logical thinking.</Text>
+    </Overview>
+
+    <!--
+1 Humans are naturally omnivorous, as dictated by our physiological needs, and veganism is a health risk. And since [explanation], I claim that Veganism is not good for everyone
+0 vegans can figure out how to eat without being at risk
+1 vegans can't figure out how to eat without being at risk
+-->
+    <Question>
+        <QuestionIdentifier>question1</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the correct missing reasoning of an argument</Title>
+            <Text>Humans are naturally omnivorous, as dictated by our physiological needs, and veganism is a health risk. And since [...], I claim that Veganism is not good for everyone</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>vegans can figure out how to eat without being at risk</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>vegans can't figure out how to eat without being at risk</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>neither of them makes sense</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+
+    <!--
+1 Comment sections provide a voice to thoughts and ideas outside the scope of regular editorial content. And since [explanation], I claim that Comment sections have not failed
+ 1 those ideas are rarely lunatic
+ 0 those ideas are often lunatic
+ -->
+    <Question>
+        <QuestionIdentifier>question2</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the correct missing reasoning of an argument</Title>
+            <Text>Comment sections provide a voice to thoughts and ideas outside the scope of regular editorial content. And since [...], I claim that Comment sections have not failed</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>those ideas are rarely lunatic</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>those ideas are often lunatic</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>neither of them makes sense</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+<!--
+0 Vaccination should remain a personal choice. And since [explanation], I claim that Vaccination should not be mandatory for all children
+ 1 children can make personal choices for themselves under the law
+ 0 children can't make personal choices for themselves under the law
+hard but 1 was correct
+-->
+
+    <Question>
+        <QuestionIdentifier>question3</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the correct missing reasoning of an argument</Title>
+            <Text>Vaccination should remain a personal choice. And since [...], I claim that Vaccination should not be mandatory for all children</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>children can make personal choices for themselves under the law</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>children can't make personal choices for themselves under the law</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>neither of them makes sense</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+<!--
+    0 The UC system admits far fewer CA high school students than it was designed to. And since [explanation], I claim that Public universities are neglecting in-state students
+ 0 colleges need to generate revenue and out of state students pay higher tuition it helps the colleges grow and offer more
+ 1 colleges don't need to generate revenue and out of state students paying higher tuition doesn't help the colleges grow and offer more
+
+- 1 was correct
+-->
+    <Question>
+        <QuestionIdentifier>question4</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the correct missing reasoning of an argument</Title>
+            <Text>The UC system admits far fewer CA high school students than it was designed to. And since [...], I claim that Public universities are neglecting in-state students</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>colleges need to generate revenue and out of state students pay higher tuition it helps the colleges grow and offer more</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>colleges don't need to generate revenue and out of state students paying higher tuition doesn't help the colleges grow and offer more</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>neither of them makes sense</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+
+    <!--
+0 The Euro is a direct result of countries ignoring economists. And since [explanation], I claim that Economists are not overrated
+ 1 The Euro is worth keeping.
+ 0 The Euro is not worth keeping.
+
+- 0 correct
+-->
+    <Question>
+        <QuestionIdentifier>question5</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the correct missing reasoning of an argument</Title>
+            <Text>The Euro is a direct result of countries ignoring economists. And since [...], I claim that Economists are not overrated</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>The Euro is worth keeping.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>The Euro is not worth keeping.</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>neither of them makes sense</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+
+    <!--
+2 When activists try to be politicians it is clear they are only pursuing their own narrow objectives and visions, just to stroke their own ego. And since [explanation], I claim that Activists cannot be politicians
+ 1 this is not what every politician does
+ 0 this is exactly what every politician does
+
+- nonsense
+-->
+    <Question>
+        <QuestionIdentifier>question6</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the correct missing reasoning of an argument</Title>
+            <Text>When activists try to be politicians it is clear they are only pursuing their own narrow objectives and visions, just to stroke their own ego. And since [...], I claim that Activists cannot be politicians</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>this is not what every politician does</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>this is exactly what every politician does</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>neither of them makes sense</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+    <!--
+0 It usually leads to rebellion. And since [explanation], I claim that Extreme parenting is counterproductive
+ 1 rebellion is not the source of bold thinking
+ 0 rebellion is the source of bold thinking
+
+- that was true (but hard)
+-->
+    <Question>
+        <QuestionIdentifier>question7</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the correct missing reasoning of an argument</Title>
+            <Text>It usually leads to rebellion. And since [...], I claim that Extreme parenting is counterproductive</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>rebellion is not the source of bold thinking</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>rebellion is the source of bold thinking</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>neither of them makes sense</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+
+    <!--
+2 These games really only serve as a frivolous event that benefits construction companies with connections. And since [explanation], I claim that Olympics are more trouble
+ 1 constructions companies with lots of projects means less jobs for the region
+ 0 constructions companies with lots of projects means more jobs for the region
+
+- right, nonsense
+    -->
+<Question>
+        <QuestionIdentifier>question8</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Title>Choose the correct missing reasoning of an argument</Title>
+            <Text>These games really only serve as a frivolous event that benefits construction companies with connections. And since [...], I claim that Olympics are more trouble</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>constructions companies with lots of projects means less jobs for the region</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>constructions companies with lots of projects means more jobs for the region</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>3</SelectionIdentifier>
+                        <Text>neither of them makes sense</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+
+
+
+</QuestionForm>
+

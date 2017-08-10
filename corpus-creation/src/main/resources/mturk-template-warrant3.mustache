@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Warrants</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- annotation script -->
+    <script type="text/javascript" src="../javascript/annotation-logic-warrant.js"></script>
+    <!-- project-specific CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+
+
+<div class="container-fluid full-page">
+    <div class="row">
+        <div class="col-xs-6 col-md-3 masthead warrant1-background">
+            <h2>Make sense out of a weird reasoning in arguments</h2>
+
+            <p>This HIT requires creativity, logical thinking, and imagination!</p>
+
+            <!--<blockquote>-->
+                <!--<strong>This study is currently in a testing phase!</strong> Help us to improve this HIT by giving us your feedback at the bottom of the page.-->
+            <!--</blockquote>-->
+
+            <p>
+                <small>
+                    Dear Worker, thank you for your interest in our HITs! You are taking part in a large-scale research project conducted by the UKP Lab at the Technische Universität Darmstadt, Germany.
+                </small>
+            </p>
+
+            <h3>Task</h3>
+
+            <p>You see {{numberOfArguments}} arguments to different topics written by a fictive person, John Doe.
+            John comes from a far away (probably not the U.S.), so he has a different common sense knowledge and a rather weird way of reasoning.
+            Yet, John likes discussing about current controversial issues.</p>
+
+            <p>In each argument, John <strong>takes a stance</strong> to the issue and <strong>provides a reason</strong> to support his argument.</p>
+            <p>But he does not explain his line of reasoning, so we don't know why and how this reason is relevant.</p>
+
+            <p>Your <strong>task</strong> is to <strong>fill the gap</strong> and explain John's reasoning.</p>
+            <p><strong>You might feel</strong> that the provided reason is <strong>actually supporting the opposite side</strong> than the one John takes,
+                but as we said - John's world plays his own rules... So can you <strong>fabricate</strong> a meaningful explanation?</p>
+
+            <h4>Recommendations</h4>
+            <p>Try to find the most straightforward and plausible explanation possible. Adults wouldn't probably buy it anyway, but maybe kids with less experience and world knowledge?</p>
+            <p>Which means: you can make up things, but keep them as believable and relevant as possible.</p>
+
+
+            <h4>Some examples</h4>
+
+            <button class="btn btn-default" id="ex_toggle_examples">Show/hide examples</button>
+
+            <div id="examples" class="example">
+
+                <p>Argument about experienced teachers:</p>
+                <p><em>Teachers become better and more consistent with more experience. And since [...explanation...], I claim that Teachers do not need to have experience</em></p>
+                <p>Possible explanation: <em>not all students need a good teacher</em></p>
+                <p>Improper explanation: <em>everyone has to start somewhere</em></p>
+
+                <hr/>
+
+                <p>Argument about marijuana as a gateway drug:</p>
+                <p><em>Many patients have identified cannabis as an effective and safer alternative to their prescription drugs. And since [...explanation...], I claim that Marijuana is a gateway drug.</em></p>
+                <p>Possible explanation:
+                <em>
+                many patients taking marijuana as an alternative medication are also hardcore drug users
+                </em>
+                </p>
+
+                <hr/>
+
+                <p>Argument about whether bank fees are necessary:</p>
+                <p><em>Banks have free use of our money for weeks, months, and years. And since [...explanation...], I claim that Fees are necessary.</em></p>
+                <p>Possible explanation:
+                    <em>money we put in banks is not sufficient for them to make ends meet</em>
+                </p>
+                <p>Improper explanation:
+                <em>they have this right</em>
+                </p>
+
+                <hr/>
+
+
+                <p>Argument about humanities programs in colleges:</p>
+                <p><em>Students need to think critically and outside of conventional ideas. And since [...explanation...], I claim that Colleges do not need humanities programs</em>
+                </p>
+
+                <p>Possible explanation: <em>humanities programs do not teach critical thinking</em></p>
+
+                <hr/>
+
+                <p>Argument about veganism good for anyone.</p>
+                <p><em>I couldn't think straight without dairy products. And since [...explanation...], I claim that Veganism is good for everyone</em></p>
+                <p>Possible explanation: <em>people don't need to think clearly to function</em>
+            </div>
+
+
+            <p>
+                <small>By accepting this HIT, you agree that your submitted content will be licensed under Creative Commons CC0 (Public Domain) license.
+                    <br/>
+                    <strong>ATTENTION:</strong> The results will be processed by a state-of-the-art algorithm for detecting unreliable workers and checked manually for quality. Therefore it might take up to 7 days until the HITs are approved. Spammers and obvious very low-quality assignments might get rejected.
+                </small>
+            </p>
+
+        </div>
+        <div class="col-xs-12 col-md-6">
+
+
+            <form name="mturk_form_name" id="mturk_form" method="post" action="{{mturkURL}}" data-type="reasons">
+                <!-- the value will be injected by mturk-required-script.js -->
+                <input type="hidden" id="assignmentId" name="assignmentId" value=""/>
+
+                <!-- container for collected annotation results updated by javascript after each interactive action -->
+                <input type="hidden" id="collectedAnnotationResults" name="collectedAnnotationResults" value=""/>
+
+                {{#arguments}}
+                    <div class="argument-box">
+                        <div class="bg-success debate-title">
+                            <h4>
+                                Debate topic: <strong>{{title}}</strong>
+                            </h4>
+                            <p>
+                                Additional info: {{description}}
+                            </p>
+                        </div>
+
+                        <div id="{{reasonId}}" class="argument">
+
+                            <div class="sanity-check-box">John Doe argues:</div>
+                            <div class="framed form-inline">
+                                <p>
+                                    {{reasonText}}
+                                </p>
+
+                                    <!--<div class="form-group">-->
+                                    <!--<label for="14672166_0_opposingStance_warrant">John thinks that ...</label>-->
+                                    <!--<textarea class="form-control" rows="3" id="14672166_0_opposingStance_warrant"-->
+                                    <!--name="14672166_0_opposingStance_warrant"></textarea>-->
+                                    <!--</div>,-->
+                                <div class="form-group">
+                                    <label for="{{reasonId}}_opposingStance_warrant">And since</label>
+                                    <input type="text" class="form-control" id="{{reasonId}}_opposingStance_warrant"
+                                           name="{{reasonId}}_opposingStance_warrant"
+                                           placeholder="..fill the reasoning gap with a proper explanation..." style="width: 50em;" data-reasonid="{{reasonId}}">,
+                                </div>
+                                <strong>I claim that</strong>
+                                <p>
+                                {{opposingStance}}
+                                </p>
+
+                            </div>
+
+                            <div class="alert alert-info tooltipbox" role="alert" style="margin: 2em; display: block;">
+                                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                                <span class="tooltipText">
+                                    Formulate the reasoning like a general commonsense knowledge as a stand-alone statement, for example
+                                    <em>"if you drink too much alcohol, you get headache"</em>,
+                                    <em>"smoking causes cancer"</em>,
+                                    or <em>"people are happier if their spend more time with their parents"</em>.
+
+                                    <span class="tooltipText">A <strong>proper explanation</strong>:</span>
+                                <ul>
+                                    <li>Must relate to the content of the given reason and claim.</li>
+                                    <li>Does not simply repeat or rephrases what's already said in the reason.</li>
+                                    <li>Is kept short without necessary or distracting information.</li>
+                                    <li>Does not start with "and" or "but" and avoids using much pronouns if possible ("they", "these", "it", etc.).</li>
+                                    <li>Avoids starting with "because", "the person says", "John says" or similar.</li>
+                                </ul>
+
+                                </span>
+                            </div>
+
+                            <div class="sanity-check-box">Sanity check: Read what you have written!</div>
+                            <div class="framed margin-after">
+                                <p>
+                                    {{reasonText}} And since
+                                    <span id="{{reasonId}}_sanityContainer"></span>,
+                                    I claim that {{opposingStance}}.
+                                </p>
+                            </div>
+
+                            <!--<p>If you are sure you can't make any sense out of it, select the following option (in the worst case only):</p>-->
+
+                            <div class="sanity-check-box">Is it impossible?</div>
+                            <div class="framed margin-after form-inline">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="{{reasonId}}_opposingStance_warrant_impossible" name="{{reasonId}}_opposingStance_warrant_impossible" data-reasonid="{{reasonId}}">
+                                        I tried hard and twisted my brain but it's impossible to explain John's argument meaningfully.
+                                    </label>
+                                </div>
+                                <div id="{{reasonId}}_impossible_why_div" class="form-group" style="display: none">
+                                    <label for="{{reasonId}}_impossible_why">Why? Provide a reason:</label>
+                                    <input type="text" class="form-control" id="{{reasonId}}_impossible_why"
+                                           name="{{reasonId}}_impossible_why"
+                                           style="width: 50em;">
+                                </div>
+                            </div>
+
+
+                            <div class="sanity-check-box">Are you familiar with the topic?</div>
+                            <div class="framed">
+                                <!--<h4>Are you familiar with the topic?</h4>-->
+                                <div id="{{reasonId}}_familiarGroup" class="radio familiarGroup">
+                                    <label style="margin-right: 10px">
+                                        <input type="radio" name="{{reasonId}}_familiarGroup" id="{{reasonId}}_familiarGroup_yes" value="yes" data-reasonid="{{reasonId}}">
+                                        I'm rather <strong>familiar</strong> with the topic
+                                    </label>
+                                    <label style="margin-right: 10px">
+                                        <input type="radio" name="{{reasonId}}_familiarGroup" id="{{reasonId}}_familiarGroup_somewhat" value="somewhat" data-argumentid="{{reasonId}}">
+                                        I'm <strong>somewhat familiar</strong> with the topic
+                                    </label>
+                                    <label style="margin-right: 10px">
+                                        <input type="radio" name="{{reasonId}}_familiarGroup" id="{{reasonId}}_familiarGroup_no" value="no" data-reasonid="{{reasonId}}">
+                                        I'm rather <strong>unfamiliar</strong> with the topic
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                {{/arguments}}
+
+                <div class="feedback" style="margin-bottom: 20px;">
+
+                    <div class="form-group">
+                        <label for="feedback">Any constructive feedback on this HIT is much welcome</label>
+                        <input type="text" class="form-control" id="feedback"
+                               name="feedback"/>
+                    </div>
+
+                    <button type="submit" id="submitButton" name="Submit HIT"
+                            class="btn btn-primary"
+                            disabled="disabled">Submit HIT
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="../javascript/mturk-required-script.js"></script>
+</html>

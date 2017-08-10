@@ -1,0 +1,234 @@
+10340252_593
+== If Police Encounters Were Filmed; Should police officers be required to wear cameras that record their interactions with the public? ==
+Police officers should be required to wear cameras [because] There are cameras in public places so privacy should not be problem.
+----
+A1OYYWJ2B7OQTD: Since cameras are everyone, police cameras would not be a problem and could be helpful.
+-- missing the point with privacy; too much reasoning...
+A1CF6U3GF7DZEJ: Police officers as public agents  should have no expectation of privacy.
+-- missing the point
+A1I4CYG5YDFTYM: There are already a high number of cameras in public areas that record everyones activities so these should not be necessary.
+-- wrong way :)
+
+
+
+11163651_240
+== Should All Immigrants Get ID Cards?; Should cities issue identification for anyone who has no passport or driver's license, even if they are not in the country legally? ==
+All immigrants should get ID cards [because] Immigrant ID cards would result in acts of disobedience.
+----
+APW9F8OTJ4KXO : Immigrant ID cards would allow disobedience.
+-- repeating
+A1I4CYG5YDFTYM: These IDs would only cause disruptions from people.
+-- repeating
+A3TQKAOIJSPPRB: ID cards for immigrants would result in disobedient acts.
+-- repeating
+
+--- TODO: find a good example
+
+11893475_466
+== Should the Government Grade Colleges?; Should the government rate colleges to hold them accountable for graduation rates, student debt and access for the poor and minorities? ==
+Government should grade colleges [because] Rank-ordering colleges isn't necessary, because each would use the same standardized scale.
+----
+A1CF6U3GF7DZEJ: Standardized grading is logical.
+-- OK: standardized scale is working well (is logical)
+
+APW9F8OTJ4KXO : It's unnecessary to rank colleges since they'd all use the same scale.
+-- repeating
+A1I4CYG5YDFTYM: It would not be a good system because they would all be scored on the same standardized scale.
+-- repeating...
+
+== When Companies Close Doors to the Future; Should businesses be allowed to have new employees sign noncompete deals, agreeing to not to work for competitors? ==
+Businesses should be allowed to have new employees sign noncompete deals [because] Businesses shouldn't be able to stop employees from getting better deal when the businesses themselves try to get what's best for their business.
+----
+A1CF6U3GF7DZEJ: It restricts employee freedom.
+APW9F8OTJ4KXO : Businesses should not be able to impede an employee's future for their own gains.
+A1I4CYG5YDFTYM: Businesses are only looking out for their best interest, therefore they should also allow employees the same privledge.
+
+Not good: Businesses are only looking out for their best interest, therefore they should also allow employees the same privilege.
+    Good: Businesses should also allow employees the same privilege.
+
+
+== When Companies Close Doors to the Future; Should businesses be allowed to have new employees sign noncompete deals, agreeing to not to work for competitors? ==
+Businesses should not be allowed to have new employees sign noncompete deals [because] Non-compete agreements are unfair to employees and restrict their freedom to work.
+----
+A34MRQ1OP87XC6: The deals will interfere with worker rights.
+A1CF6U3GF7DZEJ: They restrict employee freedom.
+APW9F8OTJ4KXO :
+
+Good: It is unfair for businesses to restrict an employee's freedom to work.
+
+
+== Should Restaurant Reservations Be for Sale?; Do new apps usefully provide a way for people to get into popular restaurants, or are they just another way to sell what was once free? ==
+a way to sell what was once free [because] Everyone should pay the same for the same thing.
+----
+A34MRQ1OP87XC6: A restaurant who has on sale prices is not that popular
+A1CF6U3GF7DZEJ: It is ethical that restaurants should offer equal treatment.
+APW9F8OTJ4KXO : It's unfair for people to pay to get into popular restaurants, everyone should have an equal chance.
+
+Good: A1CF6U3GF7DZEJ: It is ethical that restaurants should offer equal treatment.
+Bad: (completely offtopic): A restaurant who has on sale prices is not that popular
+
+
+
+13573791_73
+== Keeping Only the Best Behaved; Are charter schools, with their high rates of suspension and expulsion, cherry-picking students? ==
+Charter schools are not cherry-picking students [because] Where I live, I see them cherry-picking all the time.
+----
+A1OSRB1Q63XXWZ: They try to get the students that fit their idea of the concept of their charter.  If they pick anyone then it would not be a good fit and the school will fail.
+A34MRQ1OP87XC6: It clearly states  I see them cherry-picking all the time.
+
+Bad: (too much added content): They try to get the students that fit their idea of the concept of their charter.  If they pick anyone then it would not be a good fit and the school will fail.
+Good: I have seen cherry-picking firsthand.
+
+
+== Do Police Use Deadly Force Too Often?; Have police officers become too willing to use force or are they reacting to the dangers they face every day? ==
+Police is reacting to dangers [because] If police dress aggressively, they will act aggressively.
+----
+A11HK2XJZAXPPX: It doesn't relate to their dress and willingness to use force.
+A1CF6U3GF7DZEJ: Reports of police brutality have been all too common.
+A1I4CYG5YDFTYM: Police already act more aggressively when they are dressed more aggressively.
+
+Bad (does not relate to the given reason): Reports of police brutality have been all too common.
+Bad (repeating the reason): Police already act more aggressively when they are dressed more aggressively.
+
+TODO .... this is very hard one, I don't get the logic of the reason at all....
+
+== Is Overcrowding a Legitimate Threat?; Do we still need to worry about Paul Ehrlich's predictions of an overcrowded planet? ==
+Overcrowding is not a legitimate threat [because] There are limited resources available, and we must make sure that population doesn't outproduce the resources we have.
+----
+A11HK2XJZAXPPX: The reason is all about how there is limited resources
+A1CF6U3GF7DZEJ: It is evident that we have limited resources.
+A1I4CYG5YDFTYM: There are only so many natural resources and things people need to survive. We must make sure that the population stays at a point where we have enough supplies for everyone.
+
+Bad: (repeating): The reason is all about how there is limited resources
+Bad: (rephrasing reason): There are only so many natural resources and things people need to survive. We must make sure that the population stays at a point where we have enough supplies for everyone.
+Good: More people doesn't mean more people to produce more resources
+
+
+== Should Drug Addicts Be Forced Into Treatment?; Massachusetts Gov. Charlie Baker wants to give hospitals the power to commit substance abusers. Is this the right approach? ==
+Drug addicts should be forced into treatment [because] Forcing a person to do something is never effective.
+----
+AOO53KIMNLQNM : Because by forcing them the treatment will not be effective.
+--repeating
+A11K5HVS2IU9RR: The person is stating that forcing someone to do something will not help their addiction
+--repeating
+A1MFZFYYDW4ZIX: Because forcing them won't work
+
+Good: Effective methods are important for treatment
+
+
+== Have Comment Sections Failed?; In recent years, many media companies have disabled them because of widespread abuse and obscenity. ==
+Comment sections have failed [because] Biased reporting is called out in the comment section.
+----
+A1CF6U3GF7DZEJ: Comments counterbalance reporting.
+APW9F8OTJ4KXO : Comment sections allow readers to call out biased reporting.
+--wrong repeating
+A1I4CYG5YDFTYM: When reporters fail to report fairly, the commentors can often shed light on not only that but the opposite side of the story.
+--wrong: rephrasing
+
+Good: Comments counterbalance reporting.
+
+
+== Is Marijuana a Gateway Drug?; Does using marijuana lead to the use of more dangerous drugs, making it too dangerous to legalize? ==
+Marijuana is a gateway drug [because] I would have done hard drugs and died over 20 years ago.
+----
+A11HK2XJZAXPPX: The reason argues that a person would have died using something harder
+A1CF6U3GF7DZEJ: One person's testimony does not justify a common argument. ---nice but for the wrong side
+A1I4CYG5YDFTYM: If this were true, given my history of using it, I would have died a few decades ago.
+
+Good: I'm still alive
+
+
+== Is Marijuana a Gateway Drug?; Does using marijuana lead to the use of more dangerous drugs, making it too dangerous to legalize? ==
+Marijuana is a gateway drug [because] Many patients have identified cannabis as an effective and safer alternative to their prescription drugs.
+----
+APW9F8OTJ4KXO : Marijuana is found by many to be a safer alternative to prescription drugs.
+--repeating
+A1CF6U3GF7DZEJ: Patients have found a medical use for marijuana.
+--repeating
+A1I4CYG5YDFTYM: It is actually causing patients to leave their prescriptions and other medicines behind for marijuana instead meaning they are doing less drugs.
+--missing the point
+
+Good: Patients using marijuana have not started taking hard drugs.
+
+
+== Should Brazil Postpone the Olympics?; The country is in the midst of a political and economic crisis, not to mention a Zika outbreak, and the Summer Games are three months away. ==
+Brazil should postpone Olympics [because] The damage that the author warns about has already been inflicted.
+----
+APW9F8OTJ4KXO : Postponing the Olympics would not undo the damage already done.
+A1CF6U3GF7DZEJ: There is too much damage from the Olympics.
+A1I4CYG5YDFTYM: The damage is already done so why bother postponing the Olympics?
+
+Good: Postponing the Olympics would not undo the damage already done.
+Bad: There is too much damage from the Olympics.
+
+
+
+== Are Medical Websites Healthful?; Does the internet add to patients' knowledge, or dangerously misinform them? ==
+Medical websites are dangerous [because] It would be difficult to trust any doctor who discouraged patients from doing any of their own research.
+----
+A1CF6U3GF7DZEJ: It makes sense for people to research topics.  Not accepting medical websites would waste a potential good source of information.
+A1I4CYG5YDFTYM: If doctors discouraged patients seeking their own information to become better educated, they are not a doctor to be trusted.
+APW9F8OTJ4KXO : Patients should do their own research.
+
+
+
+
+Criteria:
+=========
+
+2) Do not repeat what's already said
+
+Foreign language classes should be mandatory in college [because] It takes a lifetime to truly learn a foreign language.
+
+A11K5HVS2IU9RR: The person is stating that foreign language shouldn't be mandatory because to really learn one
+it'd be a lifetime of teaching
+
+which is only rephrased
+"Foreign language classes shouldn't be mandatory in college because It takes a lifetime to truly learn a foreign language."
+
+
+== Is Marijuana a Gateway Drug?; Does using marijuana lead to the use of more dangerous drugs, making it too dangerous to legalize? ==
+Marijuana is a gateway drug [because] I would have done hard drugs and died over 20 years ago.
+----
+A11HK2XJZAXPPX: The reason argues that a person would have died using something harder
+
+It's only rephrasing known facts (I would have died) but missing the point,
+which is: "I used to smoke marijuana and I'm still alive"
+
+
+A11K5HVS2IU9RR: The person is stating that forcing someone to do something will not help their addiction
+
+
+
+1) Minimality
+
+Foreign language classes should not be mandatory in college [because] It takes a lifetime to truly learn a foreign language.
+
+AOO53KIMNLQNM : "You are only in college a few years and cannot expect to truly learn the foreign language."
+Can be simplified to "You are only in college a few years." (the rest is clear)
+
+2) Don't add necessary distracting information
+
+Companies should be allowed to patent genes [because] The human blueprint is part of the natural world and was not created by mankind.
+----
+A1OSRB1Q63XXWZ: Man should not play God.  If they patent genes it is like they are saying that they created it.
+Can be made more clearer: "Only things created by mankind should be patented by companies."
+Or "Natural world entities should not be patented by companies".
+
+
+3) Avoid starting with "because" or "the person says" or similar, avoid pronouns if possible
+
+== Should Drug Addicts Be Forced Into Treatment?; Massachusetts Gov. Charlie Baker wants to give hospitals the power to commit substance abusers. Is this the right approach? ==
+Drug addicts should be forced into treatment [because] Forcing a person to do something is never effective.
+----
+AOO53KIMNLQNM : Because by forcing them the treatment will not be effective.
+Better: By forcing addicts the treatment will not be effective.
+
+
+
+14672166_0
+== Do Police Use Deadly Force Too Often?; Have police officers become too willing to use force or are they reacting to the dangers they face every day? ==
+Police is reacting to dangers [because] If police dress aggressively, they will act aggressively.
+----
+A11HK2XJZAXPPX: It doesn't relate to their dress and willingness to use force.
+?????

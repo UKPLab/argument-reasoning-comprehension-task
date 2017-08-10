@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Choose the suitable reason to fill the gap in an argument</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- annotation script -->
+    <script type="text/javascript" src="../javascript/original-warrant.js"></script>
+    <!-- project-specific CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+
+
+<div class="container-fluid full-page">
+    <div class="row">
+        <div class="col-xs-6 col-md-3 masthead original-warrant-background">
+            <h2>Correct an explanation to fix the logic of an argument</h2>
+
+
+            <!--<blockquote>-->
+                <!--<strong>This study is currently in the testing phase!</strong> Help us to improve this HIT by giving us your feedback at the bottom of the page.-->
+            <!--</blockquote>-->
+
+            <p>
+                <small>
+                    Dear Worker, thank you for your interest in our HITs! You are taking part in a large-scale research project conducted by the UKP Lab at the Technische Universität Darmstadt, Germany.
+                </small>
+            </p>
+
+            <h3>Task</h3>
+
+            <p>
+                There are {{numberOfArguments}} arguments to various topics written by a fictional person, John Doe.
+            </p>
+            <p>John comes from a far away (probably not the U.S.), so he has a different common sense knowledge and a rather peculiar way of reasoning.</p>
+            <p>His arguments are broken because his <strong>explanations</strong> of the given reason seem to indicate the opposite than he eventually <strong>claims</strong>.</p>
+            <p>Your <strong>task</strong> is to correct the explanation in order to fix the logical reasoning of the argument.</p>
+
+            <h3>How to correct the explanation</h3>
+            <ul>
+                <li>Do only <strong>minimal changes</strong>, try to keep the original line of reasoning. It might only involve negation, indefinite pronouns, or similar.</li>
+                <li>Make sure your fixed explanation makes sense by reading the <strong>sanity check</strong> box.</li>
+                <li>Stay <strong>objective</strong> even if you strongly disagree with his views.</li>
+                <li>If you feel your edits would completely change the the line of reasoning, mark it as <strong>impossible</strong> and provide an explanation.</li>
+            </ul>
+
+
+            <p>Ignore typos or small grammar errors.</p>
+
+
+            <h4>Few examples</h4>
+
+            <button class="btn btn-default" id="ex_toggle_examples">Show/hide examples</button>
+
+            <div id="examples" class="example">
+                <p>
+                The only acceptable exemption should be a legitimate medical reason, such as a vaccine allergy. And since <span class="underlined-text">vaccines contain chemicals many children may be allergic to</span>, I claim that Vaccination should be mandatory for all children
+                </p>
+                <ul>
+                    <li>
+                        WRONG: vaccines contain many chemicals that children may be allergic to
+                    </li>
+                    <li>
+                        WRONG: I would say it's impossible with the following explanation: shouldn't be mandatory
+                    </li>
+                    <li>
+                        OK: <span class="underlined-text">vaccines don't contain chemicals many children may be allergic to</span>
+                    </li>
+                </ul>
+
+                <hr/>
+
+                <p>
+                    Salt is one of the best ways to enhance flavor.	And since <span class="underlined-text">it is much more pious to eat a bland but nutritious diet</span>, I claim that Salt should have a place at the table
+                </p>
+
+                <ul>
+                    <li>
+                        WRONG: taste counts more than being pious
+                    </li>
+                    <li>
+                        WRONG: it is not pious to eat a bland but nutritious diet
+                    </li>
+                    <li>
+                        OK: <span class="underlined-text">it is much more enjoyable to eat a flavorful but nutritious diet</span>
+                    </li>
+                </ul>
+
+                <hr/>
+
+                <p>
+                Companies laundered drug cartel money and made 8 billion and were only fined 4 billion for this. And since <span class="underlined-text">the company admitted when they were guilty</span>, I claim that Companies can't be trusted
+                </p>
+
+
+                <ul>
+                    <li>
+                        WRONG: the companies admitted they were guilty
+                    </li>
+                    <li>
+                        WRONG: the company was guilty
+                    </li>
+                    <li>
+                        OK: <span class="underlined-text">the company denied that they were guilty</span>
+                    </li>
+                </ul>
+
+                <hr/>
+
+                <p>
+                Comment sections provide different views on opinion pieces. And since <span class="underlined-text">different views detract from the main article</span>, I claim that Comment sections have not failed
+                </p>
+
+
+                <ul>
+                    <li>
+                        WRONG: different views detract from the main article
+                    </li>
+                    <li>
+                        WRONG: I would say it's impossible with the following explanation: it doesn't seem to be wrong
+                    </li>
+                    <li>
+                        OK: <span class="underlined-text">different views complement the main article</span>
+                    </li>
+                </ul>
+            </div>
+
+
+            <p>
+                <small>By accepting this HIT, you agree that your submitted content will be licensed under Creative Commons CC0 (Public Domain) license.
+                    <br/>
+                    <strong>ATTENTION:</strong> The results will be processed by a state-of-the-art algorithm for detecting unreliable workers and checked manually for quality. Therefore it might take up to 7 days until the HITs are approved. Spammers will be revealed and rejected.
+                </small>
+            </p>
+
+        </div>
+        <div class="col-xs-12 col-md-6">
+
+
+            <form name="mturk_form_name" id="mturk_form" method="post" action="{{mturkURL}}" data-type="claim">
+                <!-- the value will be injected by mturk-required-script.js -->
+                <input type="hidden" id="assignmentId" name="assignmentId" value=""/>
+
+                {{#reasonClaimWarrantList}}
+                    <div class="argument-box">
+                        <div class="bg-success debate-title">
+                            <h3>
+                                <small>Debate question:</small>
+                                {{title}}
+                            </h3>
+                            <p>
+                                Additional info: {{description}}
+                            </p>
+                        </div>
+
+
+                        <div id="{{reasonClaimWarrantId}}" class="argument">
+                            <div class="sanity-check-box">John Doe argues:</div>
+                            <div class="framed form-inline">
+                                <div style="padding-top: 1em; padding-right: 1em">
+                                    <p>
+                                        {{reasonGist}}
+                                        And since
+                                        <span class="underlined-text" id="{{reasonClaimWarrantId}}_warrant">{{alternativeWarrant}}</span>, I claim that {{annotatedStance}}
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <h4>Correct the <span class="underlined-text">underlined explanation</span> to fix the logic of the argument</h4>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="{{reasonClaimWarrantId}}_fixed_warrant"
+                                           name="{{reasonClaimWarrantId}}_fixed_warrant"
+                                           style="width: 100%;" data-reasonid="{{reasonClaimWarrantId}}"
+                                    value="{{alternativeWarrant}}">
+                                </div>
+
+                            <div class="alert alert-info tooltipbox" role="alert" style="margin: 2em; display: block;">
+                                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                                <span class="tooltipText">
+                                    Do only <strong>minimal editing</strong> to change the meaning of the explanation to fit it into the argument.
+                                    <ul>
+                                        <li>Do not add any new information (in some cases adding just a few words is necessary, though).</li>
+                                        <li>Do not write your point of view.</li>
+                                        <li>Do not fix improper casing or typos.</li>
+                                    </ul>
+
+                                    </span>
+                            </div>
+
+                            <div class="sanity-check-box">Sanity check: Read what you have written!</div>
+                            <div class="framed margin-after">
+                                <div style="padding-top: 1em; padding-right: 1em">
+                                    <p>
+                                        {{reasonGist}}
+                                        And since
+                                        <span class="underlined-text" id="{{reasonClaimWarrantId}}_fixed_warrant_sanity">{{alternativeWarrant}}</span>, I claim that {{annotatedStance}}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!--<p>If you are sure you can't make any sense out of it, select the following option (in the worst case only):</p>-->
+
+                            <div class="sanity-check-box">Is it impossible?</div>
+                            <div class="framed margin-after form-inline">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="{{reasonClaimWarrantId}}_fixed_warrant_impossible" name="{{reasonClaimWarrantId}}_fixed_warrant_impossible" data-reasonid="{{reasonClaimWarrantId}}">
+                                        I tried hard but it is simply not possible
+                                    </label>
+                                </div>
+                                <div id="{{reasonClaimWarrantId}}_impossible_why_div" class="form-group" style="display: none">
+                                    <label for="{{reasonId}}_impossible_why">Why? Provide a reason:</label>
+                                    <input type="text" class="form-control" id="{{reasonClaimWarrantId}}_impossible_why"
+                                           name="{{reasonClaimWarrantId}}_impossible_why"
+                                           style="width: 50em;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/reasonClaimWarrantList}}
+
+                <div class="feedback" style="margin-bottom: 20px;">
+
+                    <div class="form-group">
+                        <label for="feedback">Any constructive feedback on this HIT is much welcome</label>
+                        <input type="text" class="form-control" id="feedback"
+                               name="feedback"/>
+                    </div>
+
+                    <button type="submit" id="submitButton" name="Submit HIT"
+                            class="btn btn-primary"
+                            disabled="disabled">Submit HIT
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="../javascript/mturk-required-script.js"></script>
+</html>

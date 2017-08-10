@@ -1,0 +1,180 @@
+/*
+ * Copyright 2017
+ * Ubiquitous Knowledge Processing (UKP) Lab
+ * Technische Universität Darmstadt
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.sentence {
+    cursor: pointer;
+    color: #000;
+}
+
+.sentenceHover {
+    text-decoration: underline;
+}
+
+.annotatedInText {
+    color: #3F3F3F;
+    cursor: not-allowed;
+    background-color: khaki;
+    margin-left: -5px;
+    padding-left: 5px;
+}
+
+.annotatedInTextSegmentStart:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e131";
+}
+
+/* the first sentence of an annotated segment needs some extra space*/
+.annotatedInTextSegmentStart {
+    margin-left: 5px !important;
+    padding-left: 0px !important;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.annotationDisabled {
+    cursor: not-allowed;
+}
+
+.hoverSegment {
+    background-color: lightgreen;
+    margin-left: -5px;
+    padding-left: 5px;
+}
+
+.tooltipbox {
+    display: none;
+}
+
+.argument-box {
+    box-shadow: 10px 10px 5px #888888;
+    border-left: medium solid #dff0d8;
+}
+
+.argument {
+    padding: 10px;
+}
+
+.claim-background {
+    background-color: #eeeeee;
+}
+
+.reasons-background {
+    background-color: khaki;
+}
+
+.stance-background {
+    background-color: lavender;
+}
+
+.gist-background {
+    background-color: lightblue;
+}
+
+.warrant1-background {
+    background-color: #eeeeee;
+}
+
+.reason-disambiguation {
+    background-color: navajowhite;
+}
+
+.original-warrant-background {
+    background-color: burlywood;
+}
+
+.debate-title {
+    padding: 0.1em 0.5em 0.5em;
+    margin-top: 3em
+}
+
+.optional-box {
+    padding: 0.2em
+}
+
+.feedback {
+    margin-top: 25px;
+}
+
+.segment-not-allowed {
+    cursor: not-allowed;
+    color: darkgray;
+}
+
+.sentences {
+    margin-bottom: 2em;
+}
+
+.framed {
+    border: 2px solid darkgray;
+    border-radius: 10px;
+    /*margin-top: 2em;*/
+    padding-left: 1em;
+}
+
+.sanity-check-box {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    background-color: darkgray;
+    padding-left: 0.7em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    margin-left: 1em;
+    width: 16em;
+}
+
+#examples {
+    border: 2px solid darkgray;
+    border-radius: 10px;
+    /*margin-top: 2em;*/
+    padding: 1em;
+    background-color: white;
+    display: none;
+}
+
+.provided-reason-text {
+
+}
+
+.margin-after {
+    margin-bottom: 1em;
+}
+
+.selected-reason-text {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-right: 0.5em;
+}
+
+.underlined-text {
+    text-decoration: underline;
+    background-color: #fcf8e3;
+}

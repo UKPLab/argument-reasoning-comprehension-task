@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Choose the suitable reason to fill the gap in an argument</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- annotation script -->
+    <script type="text/javascript" src="../javascript/annotation-logic-task-validation.js"></script>
+    <!-- project-specific CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+
+
+<div class="container-fluid full-page">
+    <div class="row">
+        <div class="col-xs-6 col-md-3 masthead stance-background">
+            <h2>Choose the correct missing reasoning of an argument</h2>
+
+
+            <!--<blockquote>-->
+                <!--<strong>This study is currently in the testing phase!</strong> Help us to improve this HIT by giving us your feedback at the bottom of the page.-->
+            <!--</blockquote>-->
+
+            <p>
+                <small>
+                    Dear Worker, thank you for your interest in our HITs! You are taking part in a large-scale research project conducted by the UKP Lab at the Technische Universität Darmstadt, Germany.
+                </small>
+            </p>
+
+            <h3>Task</h3>
+
+            <p>
+                There are {{numberOfArguments}} incomplete arguments to various topics with a <strong>gap</strong>.
+            </p>
+            <p>
+                Your task is to choose the logically correct explanation of reasoning.
+            </p>
+            <p>
+                If none of the two first option makes sense, select the third option.
+            </p>
+            <p>Please ignore typos or small grammar errors.</p>
+
+            <p>
+                <small>By accepting this HIT, you agree that your submitted content will be licensed under Creative Commons CC0 (Public Domain) license.
+                    <br/>
+                    <strong>ATTENTION:</strong> The results will be processed by a state-of-the-art algorithm for detecting unreliable workers and checked manually for quality. Therefore it might take up to 7 days until the HITs are approved. Spammers will be revealed and rejected.
+                </small>
+            </p>
+
+        </div>
+        <div class="col-xs-12 col-md-6">
+
+
+            <form name="mturk_form_name" id="mturk_form" method="post" action="{{mturkURL}}" data-type="claim">
+                <!-- the value will be injected by mturk-required-script.js -->
+                <input type="hidden" id="assignmentId" name="assignmentId" value=""/>
+
+                {{#reasonClaimWarrantList}}
+                    <div class="argument-box">
+                        <div class="bg-success debate-title">
+                            <h3>
+                                <small>Debate question:</small>
+                                {{title}}
+                            </h3>
+                            <p>
+                                Additional info: {{description}}
+                            </p>
+                        </div>
+
+                        <div id="{{reasonClaimWarrantId}}" class="argument">
+                            <div class="sanity-check-box">Argument:</div>
+                            <div class="framed form-inline">
+                                <div style="padding-top: 1em; padding-right: 1em">
+                                    <p>
+                                        {{reasonGist}}
+                                        And since
+                                        <span id="{{reasonClaimWarrantId}}_selected_warrant_text" class="selected-reason-text" >...........</span> I claim that {{annotatedStance}}
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <h4>Which reason fills the gap?</h4>
+
+                            <div id="{{reasonClaimWarrantId}}_original_reason_group" class="stanceGroup">
+                                {{#validationWarrants}}
+                                    <div class="radio">
+                                        <label id="{{reasonClaimWarrantId}}_warrantOption_{{value}}_label" style="margin-right: 10px">
+                                            <input type="radio" name="{{reasonClaimWarrantId}}_warrant_group" id="{{reasonClaimWarrantId}}_warrant_group_{{identifier}}" value="{{identifier}}" data-reasonid="{{reasonClaimWarrantId}}">
+                                            {{warrantText}}
+                                        </label>
+                                    </div>
+                                {{/validationWarrants}}
+                            </div>
+
+                            <!--<div class="sanity-check-box">Undecidable?</div>-->
+                            <!--<div class="framed margin-after form-inline">-->
+                                <!--<div class="checkbox">-->
+                                    <!--<label>-->
+                                        <!--<input type="checkbox" id="{{reasonClaimWarrantId}}_fixed_warrant_impossible" name="{{reasonClaimWarrantId}}_fixed_warrant_impossible" data-reasonid="{{reasonClaimWarrantId}}">-->
+                                        <!--Neither of them makes any sense-->
+                                    <!--</label>-->
+                                <!--</div>-->
+                                <!--<div id="{{reasonClaimWarrantId}}_impossible_why_div" class="form-group" style="display: none">-->
+                                    <!--<label for="{{reasonId}}_impossible_why">Why? Provide a reason:</label>-->
+                                    <!--<input type="text" class="form-control" id="{{reasonClaimWarrantId}}_impossible_why"-->
+                                           <!--name="{{reasonClaimWarrantId}}_impossible_why"-->
+                                           <!--style="width: 50em;">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                {{/reasonClaimWarrantList}}
+
+                <div class="feedback" style="margin-bottom: 20px;">
+
+                    <div class="form-group">
+                        <label for="feedback">Any constructive feedback on this HIT is much welcome</label>
+                        <input type="text" class="form-control" id="feedback"
+                               name="feedback"/>
+                    </div>
+
+                    <button type="submit" id="submitButton" name="Submit HIT"
+                            class="btn btn-primary"
+                            disabled="disabled">Submit HIT
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="../javascript/mturk-required-script.js"></script>
+</html>

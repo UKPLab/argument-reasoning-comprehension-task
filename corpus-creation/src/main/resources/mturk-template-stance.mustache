@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Choose the standpoint of a comment</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- annotation script -->
+    <script type="text/javascript" src="../javascript/annotation-logic-stance.js"></script>
+    <!-- project-specific CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+
+
+<div class="container-fluid full-page">
+    <div class="row">
+        <div class="col-xs-6 col-md-3 masthead stance-background">
+            <h2>Choose the standpoint of a comment</h2>
+
+
+            <!--<blockquote>-->
+                <!--<strong>This study is currently in the testing phase!</strong> Help us to improve this HIT by giving us your feedback at the bottom of the page.-->
+            <!--</blockquote>-->
+
+            <p>
+                <small>
+                    Dear Worker, thank you for your interest in our HITs! You are taking part in a large-scale research project conducted by the UKP Lab at the Technische Universität Darmstadt, Germany.
+                </small>
+            </p>
+
+            <h3>Task</h3>
+
+            <p>
+                There are {{numberOfArguments}} comments in total in this HIT that are
+                <strong>completely independent</strong> of each other, written by different unknown persons. Each deals with a different topic.
+            </p>
+
+            <h4>Choose author's overall standpoint towards the issue</h4>
+
+            <ul>
+                <li>Read the <strong>comment</strong> fist, make sure you understand it.</li>
+                <li><strong>Choose a side</strong> for which the comment is favoring.</li>
+                <li>If none of the first three given options apply or the comment does not even talk about the topic, choose the last option.
+                    <!--<li>If the debate topic is unclear on the first sight, have a look at the possible standpoints. Both standpoint options might not represent both sides of the issue.</li>-->
+                <li>If the argument favors both stances but one more strongly, select the the more strongly favored stance.</li>
+            </ul>
+
+
+            <h4>General hints</h4>
+            <ul>
+                <li>It is certainly possible that none of the comments in the HIT takes a stance.</li>
+                <li><strong>Ignore spelling and grammatical errors</strong> in the comments, these are social media texts.</li>
+            </ul>
+
+
+            <p>
+                <small>By accepting this HIT, you agree that your submitted content will be licensed under Creative Commons CC0 (Public Domain) license.
+                    <br/>
+                    <strong>ATTENTION:</strong> The results will be processed by a state-of-the-art algorithm for detecting unreliable workers and checked manually for quality. Therefore it might take up to 7 days until the HITs are approved. Spammers will be revealed and rejected.
+                </small>
+            </p>
+
+        </div>
+        <div class="col-xs-12 col-md-6">
+
+
+            <form name="mturk_form_name" id="mturk_form" method="post" action="{{mturkURL}}" data-type="claim">
+                <!-- the value will be injected by mturk-required-script.js -->
+                <input type="hidden" id="assignmentId" name="assignmentId" value=""/>
+
+                {{#arguments}}
+                    <div class="argument-box">
+                        <div class="bg-success debate-title">
+                            <h3>
+                                <small>Debate question:</small>
+                                {{title}}
+                            </h3>
+                            <p>
+                                Additional info: {{description}}
+                            </p>
+                        </div>
+
+                        <div id="{{argumentId}}" class="argument">
+                            <h4>Comment text</h4>
+                            {{#argumentSentences}}
+                                {{text}}
+                            {{/argumentSentences}}
+
+                            <h4>Author's standpoint</h4>
+
+                            <div id="{{argumentId}}_stance_group" class="stanceGroup">
+                                {{#stances}}
+                                    <div class="radio">
+                                        <label style="margin-right: 10px">
+                                            <input type="radio" name="{{argumentId}}_stance_group" id="{{argumentId}}_stance_{{stanceValue}}" value="{{stanceValue}}" data-argumentid="{{argumentId}}">
+                                            {{stanceText}}
+                                        </label>
+                                    </div>
+                                {{/stances}}
+                            </div>
+
+                            <h4>Sarcasm/Irony?</h4>
+                            <div class="checkbox">
+                                <label style="margin-right: 10px">
+                                    <input type="checkbox" name="{{argumentId}}_sarcastic" id="{{argumentId}}_sarcastic">
+                                    The comment argues in favor of the selected standpoint using sarcasm or irony
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                {{/arguments}}
+
+                <div class="feedback" style="margin-bottom: 20px;">
+
+                    <div class="form-group">
+                        <label for="feedback">Any constructive feedback on this HIT is much welcome</label>
+                        <input type="text" class="form-control" id="feedback"
+                               name="feedback"/>
+                    </div>
+
+                    <button type="submit" id="submitButton" name="Submit HIT"
+                            class="btn btn-primary"
+                            disabled="disabled">Submit HIT
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="../javascript/mturk-required-script.js"></script>
+</html>

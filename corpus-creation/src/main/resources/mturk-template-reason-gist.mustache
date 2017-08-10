@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Gist</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- annotation script -->
+    <script type="text/javascript" src="../javascript/annotation-logic-gist.js"></script>
+    <!-- project-specific CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+
+
+<div class="container-fluid full-page">
+    <div class="row">
+        <div class="col-xs-6 col-md-3 masthead gist-background">
+            <h2>Simplify and write a gist of a reason in an argument</h2>
+
+            <!--<blockquote>-->
+                <!--<strong>This study is currently in a testing phase!</strong> Help us to improve this HIT by giving us your feedback at the bottom of the page.-->
+            <!--</blockquote>-->
+
+            <p>
+                <small>
+                    Dear Worker, thank you for your interest in our HITs! You are taking part in a large-scale research project conducted by the UKP Lab at the Technische Universität Darmstadt, Germany.
+                </small>
+            </p>
+
+            <h3>Task</h3>
+
+            <p>You see {{numberOfArguments}} arguments to different topics. There is always a
+                <strong>standpoint</strong> to the
+                topic and a single <strong>reason</strong>.</p>
+
+            <p>Your <strong>task</strong> is to
+                <strong>rephrase and simplify the reason so that it captures the gist of the reason</strong> used in the argument.
+            </p>
+
+            <h4>Recommendations</h4>
+
+            <ul>
+                <li>
+                    <strong>Do not add</strong> any new evidence, your own point of view, or information that is not included in the reason.
+                </li>
+                <li>Replace pronouns (anaphora) with nouns or phrases they refer to, if it's clear from the context.</li>
+                <ul>
+                    <li>
+                        <small>Example:
+                            <em>Standpoint: Veganism is not good for everyone. Reason:
+                                <strong>They</strong> have always looked unhealthy to me ->
+                                <strong>Vegans</strong> have always looked unhealthy to me.</em>
+                        </small>
+                    </li>
+                </ul>
+                <li>
+                    <strong>Do not simply copy & paste!</strong> Such HITs will be rejected right away.
+                </li>
+            </ul>
+
+            <!--<p>Try to find the most straightforward and plausible explanation possible. Adults wouldn't probably buy it anyway, but maybe kids with less experience and world knowledge?</p>-->
+            <!--<p>Which means: you can make up things, but keep them as believable and relevant as possible.</p>-->
+
+            <h4>Examples</h4>
+
+            <button class="btn btn-default" id="ex_toggle_examples">Show/hide examples</button>
+
+            <div id="examples" class="example">
+
+                <p>
+                    In argument about college sport programs:
+                    <em>"The amounts RU has paid coaches and athletic directors is, frankly, obscene. That monstrosity of a stadium, built at a cost of $100 million, is obscene."</em>
+                </p>
+                <ul>
+                    <li><strong>OK</strong>
+                        <em>"RU coaches are overpaid and the cost to build the stadium is $100 million."</em>
+                    </li>
+                    <li><strong>Wrong (too oversimplified)</strong>
+                        <em>"Sports programs cost an obscene amount of money to operate."</em></li>
+                </ul>
+
+
+                <p>
+                    In argument about longer school days:
+                    <em>"Be it in school or at work... people need to be well rested with at least 8 hours of sleep to perform optimally."</em>
+                </p>
+                <ul>
+                    <li><strong>OK</strong>
+                        <em>"To ensure the best performance in school, students should receive 8 hours of sleep."</em>
+                    </li>
+                    <li>
+                        <strong>Wrong (adding reasoning of the argument, not simplifying the gist of the given reason)</strong>
+                        <em>"The school day should not be longer, it is important for students to be well rested to start their day of knowledge."</em>
+                    </li>
+                </ul>
+
+                <p>
+                    In argument about longer school days:
+                    <em>"I know--with moral certainty--that so many people are underperformers (including me) when they don't get enough sleep."</em>
+                </p>
+                <ul>
+                    <li><strong>OK</strong>
+                        <em>"Many people, including me, underperform without an adequate amount of sleep."</em>
+                    </li>
+                    <li>
+                        <strong>Wrong (adding information not present in the original reason)</strong>
+                        <em>"A longer school day would cut into the time students have available for sleep, and the lack of sleep would cause them to underperform."</em>
+                    </li>
+                </ul>
+
+                <p>
+                    In argument about vacations with or without kids:
+                    <em>"I would have been happier if my parents had left me at home for many of our vacations."</em>
+                </p>
+                <ul>
+                    <li><strong>OK</strong>
+                        <em>"I would have preferred to stay at home rather than go on a family vacation with my parents."</em>
+                    </li>
+                    <li>
+                        <strong>Wrong (generalizing to "many children" which is not stated in the original reason)</strong>
+                        <em>"Parents should consider vacationing without children, many children would be happier if they had a choice."</em>
+                    </li>
+                </ul>
+
+                <p>
+                    In argument about taxing capital gains:
+                    <em>"From a strict economic viewpoint, all income should be taxed equally. This would avoid the huge incentives - and wasted, non-productive investments - in gaming the system, that firms and investors routinely make."</em>
+                </p>
+                <ul>
+                    <li><strong>OK</strong>
+                        <em>"Equality in taxed income would eliminate risky investment by firms and investors."</em>
+                    </li>
+                    <li><strong>Wrong (missing the gist of the reason)</strong>
+                        <em>"Capital gains represents a form of income and should be taxed."</em>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <p>
+                <small>By accepting this HIT, you agree that your submitted content will be licensed under Creative Commons CC0 (Public Domain) license.
+                    <br/>
+                    <strong>ATTENTION:</strong> The results will be processed by a state-of-the-art algorithm for detecting unreliable workers and checked manually for quality. Therefore it might take up to 7 days until the HITs are approved. Spammers and obvious very low-quality assignments might get rejected.
+                </small>
+            </p>
+
+        </div>
+        <div class="col-xs-12 col-md-6">
+
+
+            <form name="mturk_form_name" id="mturk_form" method="post" action="{{mturkURL}}" data-type="reasons">
+                <!-- the value will be injected by mturk-required-script.js -->
+                <input type="hidden" id="assignmentId" name="assignmentId" value=""/>
+
+                <!-- container for collected annotation results updated by javascript after each interactive action -->
+                <input type="hidden" id="collectedAnnotationResults" name="collectedAnnotationResults" value=""/>
+
+                {{#arguments}}
+                    <div class="argument-box">
+                        <div class="bg-success debate-title">
+                            <h4>
+                                Debate topic: <strong>{{title}}</strong>
+                            </h4>
+                            <p>
+                                Additional info: {{description}}
+                            </p>
+                            <p>
+                                Author's standpoint: {{stance}}
+                            </p>
+                        </div>
+
+                        <div id="{{reasonId}}" class="argument">
+
+                            <p>
+                                <strong>Reason:</strong> {{reasonText}}
+                            </p>
+
+
+                            <div class="form-group">
+                                <label for="{{reasonId}}_rephrasedReason">Rephrased and simplified reason:</label>
+                                <textarea class="form-control" rows="3" id="{{reasonId}}_rephrasedReason"
+                                          name="{{reasonId}}_rephrasedReason" data-reasonid="{{reasonId}}"></textarea>
+                            </div>
+
+
+                            <div class="alert alert-info tooltipbox" role="alert" style="margin: 2em; display: block;">
+                                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                                <span class="tooltipText">
+                                    Write the gist of the reason so it contains all important information that the author used for supporting hist standpoint in the argument.
+                                    Write very clear propositions so the reason can stand on its own.
+                                    Always check with the <strong>Sanity check</strong> that your rephrased reason makes sense.
+                                </span>
+                            </div>
+
+                            <!--<p>If you are sure you can't make any sense out of it, select the following option (in the worst case only):</p>-->
+
+                            <div class="checkbox optional-box">
+                                <label>
+                                    <input type="checkbox" id="{{reasonId}}_no_reason"
+                                           name="{{reasonId}}_no_reason"
+                                           class="implicitStance" data-reasonid="{{reasonId}}">
+                                    I tried hard but the provided reason has nothing to do with the author's standpoint, the text makes no sense.
+                                </label>
+                            </div>
+
+
+                            <div class="sanity-check-box">Sanity check</div>
+                            <div class="framed">
+                                <p>
+                                    {{stance}}. <strong>Reason: </strong>
+                                    <span id="{{reasonId}}_sanityContainer"></span>
+                                </p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                {{/arguments}}
+
+                <div class="feedback" style="margin-bottom: 20px;">
+
+                    <div class="form-group">
+                        <label for="feedback">Any constructive feedback on this HIT is much welcome</label>
+                        <input type="text" class="form-control" id="feedback"
+                               name="feedback"/>
+                    </div>
+
+                    <button type="submit" id="submitButton" name="Submit HIT"
+                            class="btn btn-primary"
+                            disabled="disabled">Submit HIT
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="../javascript/mturk-required-script.js"></script>
+</html>

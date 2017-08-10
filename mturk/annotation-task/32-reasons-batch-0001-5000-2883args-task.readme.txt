@@ -1,0 +1,24 @@
+Spammers:
+
+A2QNWWUS8VICC2	0	Nothing	38SKSKU7R29I5NOJ5BW2AODSPU7LI7	3RKHNXPHGW898O48OQ4DQ7S4F0NKU8	56	11	40	6	6
+-- block and reject
+
+Dear worker, I'm sorry for rejecting your HITs but you provided completely random answers and your average submission time was only 11 seconds/HIT which is not even sufficient to read the given texts.
+
+Bonus:
+
+A1I4CYG5YDFTYM	0,65		336YQZE83WQQZHBPY3ENLSOCKHE5ME	30U1YOGZGA8LF56U74NQ7TFQAU5DS8	40	137	241	61	41
+A104V8NZIQFN2F	0,593	3QECW5O0KIDUCC1970FZ76J4ELD5TA	391FPZIE4CYI6Y30I51GDFCCNJJUHE	158	190	765	39	111
+
+Thanks for your submitted HITs, your answers were well above average. Any feedback on TurkOpticon will be appreciated. Thanks, Ivan
+
+
+
+Check:
+I wasn't sure ow to answer the Artificial Intelligence question because there was no definition for the author's stance.	3QECW5O0KIDUCC1970FZ76J4ELD5TA	391FPZIE4CYI6Y30I51GDFCCNJJUHE
+
+
+Medical websites are "healthful or helpful"?
+
+
+Should the "Debate question" and the "author's stance" be different?;Should "taughened" be "toughened"?

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Find reasons given in the argument</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- annotation script -->
+    <script type="text/javascript" src="../javascript/annotation-logic.js"></script>
+    <!-- project-specific CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+<body>
+
+
+<div class="container-fluid full-page">
+    <div class="row">
+        <div class="col-xs-6 col-md-3 masthead reasons-background">
+            <h2>Find and mark reasons given in the argument</h2>
+
+
+            <!--<blockquote>-->
+                <!--<strong>This study is currently in a testing phase!</strong> Help us to improve this HIT by giving us your feedback at the bottom of the page.-->
+            <!--</blockquote>-->
+
+            <p>
+                <small>
+                    Dear Worker, thank you for your interest in our HITs! You are taking part in a large-scale research project conducted by the UKP Lab at the Technische Universität Darmstadt, Germany.
+                </small>
+            </p>
+
+            <h3>Task</h3>
+
+            <p>
+                There are {{numberOfArguments}} arguments in total in this HIT that are
+                completely independent of each other.
+                Each argument takes a stance towards the given issue.
+            </p>
+
+            <p>Your goal is to
+                <strong>select all reasons in the argument that support the author's stance</strong>
+                by clicking at the respective parts of the text.
+            </p>
+
+            <h4>What is a reason?</h4>
+            <ul>
+                <li>It is a text span, might be a <strong>single clause</strong> up to
+                    <strong>several sentences</strong> long.
+                </li>
+                <li>Each reason captures a
+                    <strong>single line of reasoning</strong> or a
+                    <strong>single aspect</strong> of the issue.
+                </li>
+            </ul>
+
+            <h4>Sanity checking</h4>
+            <ul>
+                <li><strong>Make sure</strong> that your selected reason(s)
+                    <strong>make sense</strong> by reading the
+                    <strong>Sanity Check box</strong>. You can do it by reading the author's stance and each individual bullet point (reason) independently.
+                </li>
+                <li>As there might be multiple reasons provided, each reason should be independent of other reasons.</li>
+
+                <li>Select reasons that the
+                    <strong>author</strong> puts forward; some of them might seem irrelevant to you but try to understand the argumentation
+                    <strong>from the author's position</strong>.</li>
+                <li>Use your common sense; if the selected reason doesn't work, you can always delete it and select something else.</li>
+                <li>Possibly there might be no reasons given at all. If so, you must select the appropriate checkbox
+                    <em>"I couldn't find any reasons in the text that the author used for supporting her/his standpoint."</em>.
+                </li>
+            </ul>
+
+
+            <h4>General hints</h4>
+            <ul>
+                <li>Stay objective, <strong>do not</strong> take into account
+                    <strong>your view</strong> on the issue.
+                </li>
+                <li><strong>Ignore</strong> spelling and grammatical <strong>errors</strong>, these are social media texts.</li>
+            </ul>
+
+
+            <p>
+                <small>By accepting this HIT, you agree that your submitted content will be licensed under Creative Commons CC0 (Public Domain) license.
+                    <br/>
+                    <strong>ATTENTION:</strong> The results will be processed by a state-of-the-art algorithm for detecting unreliable workers and checked manually for quality. Therefore it might take up to 7 days until the HITs are approved. Spammers and obvious very low-quality assignments might get rejected.
+                </small>
+            </p>
+
+        </div>
+        <div class="col-xs-12 col-md-6">
+
+
+            <form name="mturk_form_name" id="mturk_form" method="post" action="{{mturkURL}}" data-type="reasons">
+                <!-- the value will be injected by mturk-required-script.js -->
+                <input type="hidden" id="assignmentId" name="assignmentId" value=""/>
+
+                <!-- container for collected annotation results updated by javascript after each interactive action -->
+                <input type="hidden" id="collectedAnnotationResults" name="collectedAnnotationResults" value=""/>
+
+                {{#arguments}}
+                    <div class="argument-box">
+                        <div class="bg-success debate-title">
+                            <h4>
+                                Debate question: <strong>{{title}}</strong>
+                            </h4>
+                            <p>
+                                Additional info: {{description}}
+                            </p>
+                        </div>
+
+                        <div id="{{argumentId}}" class="argument">
+
+
+                            <div class="sanity-check-box">Sanity Check</div>
+                            <div id="{{argumentId}}_selectedSegments" class="selectedSegments framed">
+                                <h4>
+                                    The author's stance is "<strong>{{stance}}</strong> because ..."
+                                </h4>
+                                <ul>
+                                    <li><em>The selected reasons will be displayed here</em></li>
+                                </ul>
+
+                                <div class="checkbox optional-box">
+                                    <label>
+                                        <input type="checkbox" id="{{argumentId}}_noReasons" name="{{argumentId}}_noReasons" class="noReasons" data-argumentid="{{argumentId}}">
+                                        I couldn't find any reasons in the text that the author used for supporting her/his standpoint.
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <h4>Argument text
+                                <small>[To mark a single reason, two clicks are required: click first on its opening segment and then click on its last segment.]</small>
+                            </h4>
+                            <div class="sentences">
+                                {{#argumentSentences}}
+                                    <span class="sentence{{#disabled}} segment-not-allowed{{/disabled}}" id="{{sentenceId}}" data-position="{{position}}" data-argumentid="{{argumentId}}">{{text}}</span>
+                                {{/argumentSentences}}
+
+                                <div class="alert alert-info tooltipbox" role="alert" style="margin: 2em;">
+                                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                                    <span class="tooltipText"></span>
+                                </div>
+                            </div>
+
+
+                            <div class="sanity-check-box">Are you familiar with the topic?</div>
+                            <div class="framed">
+                                <!--<h4>Are you familiar with the topic?</h4>-->
+                                <div id="{{argumentId}}_familiarGroup" class="radio familiarGroup">
+                                    <label style="margin-right: 10px">
+                                        <input type="radio" name="{{argumentId}}_familiarGroup" id="{{argumentId}}_familiarGroup_yes" value="yes" data-argumentid="{{argumentId}}">
+                                        I'm rather <strong>familiar</strong> with the topic
+                                    </label>
+                                    <label style="margin-right: 10px">
+                                        <input type="radio" name="{{argumentId}}_familiarGroup" id="{{argumentId}}_familiarGroup_somewhat" value="somewhat" data-argumentid="{{argumentId}}">
+                                        I'm <strong>somewhat familiar</strong> with the topic
+                                    </label>
+                                    <label style="margin-right: 10px">
+                                        <input type="radio" name="{{argumentId}}_familiarGroup" id="{{argumentId}}_familiarGroup_no" value="no" data-argumentid="{{argumentId}}">
+                                        I'm rather <strong>unfamiliar</strong> with the topic
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                {{/arguments}}
+
+                <div class="feedback" style="margin-bottom: 20px;">
+
+                    <div class="form-group">
+                        <label for="feedback">Any constructive feedback on this HIT is much welcome</label>
+                        <input type="text" class="form-control" id="feedback"
+                               name="feedback"/>
+                    </div>
+
+                    <button type="submit" id="submitButton" name="Submit HIT"
+                            class="btn btn-primary"
+                            disabled="disabled">Submit HIT
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="../javascript/mturk-required-script.js"></script>
+</html>
