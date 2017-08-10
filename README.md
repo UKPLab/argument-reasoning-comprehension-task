@@ -33,6 +33,21 @@ Data for SemEval are in a simple plaintext tab-separated format. The first line 
 
 where `warrant0` and `warrant1` are *warrant* and *alternative warrant*. If `correctLabelW0orW1` is `0`, then `warrant0` is correct (thus the *warrant*) and `warrant1` is incorrect (thus the *alternative warrant*) for this particular argument. Similarly, if `correctLabelW0orW1` is `1`, then `warrant0` is the *alternative warrant* and thus incorrect, and `warrant1` is the *warrant* and thus correct.
 
+**How to understand the task?**
+
+*Reason.* And since *warrant,* *claim.*
+
+From the example above, we can construct this argument:
+
+*Miss America gives honors and education scholarships.* And since *scholarships would give women a chance to study,* *Miss America is good for women*
+
+is the correct explanation, as `warrant0` is labeled as correct in the data. Using `warrant1` would lead to an inconsistent (or simply wrong) argument:
+
+*Miss America gives honors and education scholarships.* And since *scholarships would take women from the home,* *Miss America is good for women*
+
+
+
+
 There are the following files:
 
 ```
@@ -279,7 +294,7 @@ Reason with gist statistics:
 LongSummaryStatistics{count=1927, sum=4294, min=1, average=2,228334, max=6}
 ```
 
-Thus for an argument mining system that detects argument components (premises, in this case), there are 1,927 arguments (documents) available. Each contains 2,23 premise spans on average along with a summarized gist of each premise. These arguments are exported in the UIMA XMI format compatible with [DKPro-Argumentation](https://github.com/dkpro/dkpro-argumentation) together with a CSV file with all relevant meta-data. The files are in `exported-1927-arguments-with-gold-reasons-xmi.tar.bz2` and were produced by `Step3dExportGistToXMIFiles`. These can be easily converted for example into BIO-annotations to perform argument component identification as sequence labeling, see the [example](https://github.com/dkpro/dkpro-argumentation/blob/master/de.tudarmstadt.ukp.dkpro.argumentation.examples/src/main/java/de/tudarmstadt/ukp/dkpro/argumentation/tutorial/ArgumentationCorpusBIOTokenExporter.java) in DKPro-Argumentation. We exported the data in CoNLL format, see below.
+Thus for an argument mining system that detects argument components (premises, in this case), there are 1,927 arguments (documents) available with 4,294 premises in total. Each contains 2,23 premise spans on average along with a summarized gist of each premise. These arguments are exported in the UIMA XMI format compatible with [DKPro-Argumentation](https://github.com/dkpro/dkpro-argumentation) together with a CSV file with all relevant meta-data. The files are in `exported-1927-arguments-with-gold-reasons-xmi.tar.bz2` and were produced by `Step3dExportGistToXMIFiles`. These can be easily converted for example into BIO-annotations to perform argument component identification as sequence labeling, see the [example](https://github.com/dkpro/dkpro-argumentation/blob/master/de.tudarmstadt.ukp.dkpro.argumentation.examples/src/main/java/de/tudarmstadt/ukp/dkpro/argumentation/tutorial/ArgumentationCorpusBIOTokenExporter.java) in DKPro-Argumentation. We exported the data in CoNLL format, see below.
 
 
 `61-reason-disambiguation-batch-0001-5000-4235reasons.xml.gz` is the output of reason disambiguation (step 4). Each premise is annotated with one of the following categories:

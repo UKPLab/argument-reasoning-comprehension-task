@@ -113,6 +113,14 @@ public class ExportHelper
                         .filter(premise -> ArgumentUnitUtils.getProperty(premise, "gist") != null)
                         .collect(Collectors.toList());
 
+                // make sure all none of them is annotated as "not-a-reason"
+                if (premisesWithGist.stream().anyMatch(
+                        premise -> ArgumentUnitUtils.getProperty(premise, "not-a-reason")
+                                != null)) {
+                    throw new IllegalStateException(
+                            "Encountered premises that had been marked as 'not-a-reason'");
+                }
+
                 // only actual premises with gist!
                 if (!premisesWithGist.isEmpty()) {
                     // and annotate them in the argument copy

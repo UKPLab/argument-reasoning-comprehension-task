@@ -18,11 +18,15 @@
 
 package de.tudarmstadt.ukp.experiments.exports;
 
+import de.tudarmstadt.ukp.dkpro.argumentation.types.Premise;
 import de.tudarmstadt.ukp.dkpro.core.io.xmi.XmiWriter;
 import de.tudarmstadt.ukp.experiments.pipeline.datamodel.StandaloneArgument;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.math.stat.Frequency;
+import org.apache.commons.math.stat.descriptive.DescriptiveStatistics;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.fit.pipeline.SimplePipeline;
+import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 
 import java.io.File;
@@ -30,7 +34,7 @@ import java.util.List;
 
 /**
  * Exports gold-labeled reason spans to XMI files in the DKPro-Argumentation format
- * {@link http://github.com/dkpro/dkpro-argumentation/}.
+ * {@code http://github.com/dkpro/dkpro-argumentation/}.
  * <p>
  * Each reason (Premise) contains the corresponding gist.
  * <p>
@@ -51,6 +55,9 @@ public class Step3dExportGistToXMIFiles
         String metaDataCSV = ExportHelper.exportMetaDataToCSV(arguments);
         FileUtils.write(new File(outputDir, "metadata.csv"), metaDataCSV, "utf-8");
 
+        Frequency premisesFrequency = new Frequency();
+        DescriptiveStatistics premisesStatistics = new DescriptiveStatistics();
+
         // and export them all as XMI files using standard DKPro pipeline
         for (StandaloneArgument argument : arguments) {
             JCas jCas = argument.getJCas();
@@ -60,7 +67,16 @@ public class Step3dExportGistToXMIFiles
                     XmiWriter.PARAM_USE_DOCUMENT_ID, true,
                     XmiWriter.PARAM_OVERWRITE, true
             ));
+
+            // count all premises
+            int count = JCasUtil.select(jCas, Premise.class).size();
+            premisesStatistics.addValue(count);
+            premisesFrequency.addValue(count);
         }
+
+        System.out.println("Premises total: " + premisesStatistics.getSum());
+        System.out.println("Argument: " + arguments.size());
+        System.out.println(premisesFrequency);
     }
 
     public static void main(String[] args)
