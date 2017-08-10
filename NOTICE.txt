@@ -1,0 +1,24 @@
+License information, 3rd party libraries
+
+Apache License, Version 2.0:
+https://github.com/clulab/processors
+http://commons.apache.org/
+org.dkpro.*
+http://github.com/spullara/mustache.java
+http://www.seleniumhq.org
+https://github.com/spring-projects/spring-framework
+
+BSD:
+com.thoughtworks.xstream
+
+The MIT License:
+org.jsoup http://jsoup.org/license
+
+The JSON License:
+http://json.org/license.html
+
+GNU Lesser General Public Licence (LGPL):
+http://www.jfree.org/jfreechart/
+
+NTP License (https://opensource.org/licenses/NTP):
+USC/ISI MACE Multi-Annotator Competence Estimation
