@@ -238,6 +238,8 @@ mturk/aws-mturk-clt-1.3.1/*
 
 All the following files are located in the `mturk/annotation-task/data` folder.
 
+#### Stance detection
+
 `22-stance-batch-0001-5000-all.xml.gz` gold-annotated data after the first step (Stance annotation). The statistics are
 
 ```
@@ -250,8 +252,11 @@ No stance (independent of sarcasm)             1083        22%
 Discarded by MACE                               249         5%
  ```
 
-`22-stance-batch-0001-5000-only-with-clear-stances.xml.gz` then contains 2884 non-sarcastic arguments that take one of the two stances. 
+`22-stance-batch-0001-5000-only-with-clear-stances.xml.gz` then contains 2884 non-sarcastic arguments that take one of the two stances in the XML format.
 
+We also provide 3365 stance-taking arguments (including sarcastic ones) exported in a tab-separated plain text format in `mturk/annotation-task/data/exported-3365-stance-taking-arguments.tsv`
+
+#### Reason spans and reason gist
 
 `32-reasons-batch-0001-5000-2026args-gold.xml.gz` is the output of the second step (Reason span annotations) and contains 2026 arguments annotated with gold-labeled reason spans.
 Internally, annotations in the XML file are embedded in UIMA format which is serialized into Base64 encoding (maybe not the 'cleanest' solution but working fine). For working with the annotations, DKPro framework is used internally. Nevertheless, the content can be easily accessed by calling `getJCas()` and `setJCas()` in `StandaloneArgument` (see for example `Step2dGoldReasonStatistics`).
@@ -296,6 +301,7 @@ LongSummaryStatistics{count=1927, sum=4294, min=1, average=2,228334, max=6}
 
 Thus for an argument mining system that detects argument components (premises, in this case), there are 1,927 arguments (documents) available with 4,294 premises in total. Each contains 2,23 premise spans on average along with a summarized gist of each premise. These arguments are exported in the UIMA XMI format compatible with [DKPro-Argumentation](https://github.com/dkpro/dkpro-argumentation) together with a CSV file with all relevant meta-data. The files are in `exported-1927-arguments-with-gold-reasons-xmi.tar.bz2` and were produced by `Step3dExportGistToXMIFiles`. These can be easily converted for example into BIO-annotations to perform argument component identification as sequence labeling, see the [example](https://github.com/dkpro/dkpro-argumentation/blob/master/de.tudarmstadt.ukp.dkpro.argumentation.examples/src/main/java/de/tudarmstadt/ukp/dkpro/argumentation/tutorial/ArgumentationCorpusBIOTokenExporter.java) in DKPro-Argumentation. We exported the data in CoNLL format, see below.
 
+#### Reason disambiguation
 
 `61-reason-disambiguation-batch-0001-5000-4235reasons.xml.gz` is the output of reason disambiguation (step 4). Each premise is annotated with one of the following categories:
 
