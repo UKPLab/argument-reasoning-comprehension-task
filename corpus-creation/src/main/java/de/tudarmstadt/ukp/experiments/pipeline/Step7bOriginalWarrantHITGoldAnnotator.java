@@ -18,13 +18,13 @@
 
 package de.tudarmstadt.ukp.experiments.pipeline;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.math.stat.Frequency;
 import de.tudarmstadt.ukp.experiments.pipeline.datamodel.ReasonClaimWarrantContainer;
 import de.tudarmstadt.ukp.experiments.pipeline.datamodel.XStreamSerializer;
 import de.tudarmstadt.ukp.experiments.pipeline.gold.MACEHelper;
 import de.tudarmstadt.ukp.experiments.pipeline.gold.MTurkOutputReader;
 import de.tudarmstadt.ukp.experiments.pipeline.gold.SingleWorkerAssignment;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.math.stat.Frequency;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -119,8 +119,18 @@ public class Step7bOriginalWarrantHITGoldAnnotator
 
                 // and save
                 if (globalAssignments.containsKey(id)) {
+                    String originalWarrant = globalAssignments.get(id).first().getLabel();
+
+                    // do sanity checking
+                    if (reasonClaimWarrantContainer.getAlternativeWarrant()
+                            .equals(originalWarrant)) {
+                        throw new IllegalStateException(
+                                "original warrant and alternative warrant do not differ! "
+                                        + reasonClaimWarrantContainer.getReasonClaimWarrantId());
+                    }
+
                     reasonClaimWarrantContainer
-                            .setOriginalWarrant(globalAssignments.get(id).first().getLabel());
+                            .setOriginalWarrant(originalWarrant);
 
                     resultContainer.add(reasonClaimWarrantContainer);
                     twistedWarrants.addValue("Original_warrant_ok");
@@ -195,7 +205,8 @@ public class Step7bOriginalWarrantHITGoldAnnotator
                         "mturk/annotation-task/92-original-warrant-batch-0001-5000-batch-0600-2613-task.output.csv")),
                 new File(
                         "mturk/annotation-task/data/80-aw-validation-batch-0001-5000-all-batches-3791reason-claim-pairs.xml.gz"),
-                new File("mturk/annotation-task/data/92-original-warrant-batch-0001-5000-2447-good-reason-claim-pairs.xml.gz"),
+                new File(
+                        "mturk/annotation-task/data/92-original-warrant-batch-0001-5000-2447-good-reason-claim-pairs.xml.gz"),
                 null);
 
     }
