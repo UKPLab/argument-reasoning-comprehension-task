@@ -254,7 +254,9 @@ Discarded by MACE                               249         5%
 
 `22-stance-batch-0001-5000-only-with-clear-stances.xml.gz` then contains 2884 non-sarcastic arguments that take one of the two stances in the XML format.
 
-We also provide 3365 stance-taking arguments (including sarcastic ones) exported in a tab-separated plain text format in `mturk/annotation-task/data/exported-3365-stance-taking-arguments.tsv`
+We also provide 3365 stance-taking arguments (including sarcastic ones) exported in a tab-separated plain text format in `mturk/annotation-task/data/exported-3365-stance-taking-arguments.tsv`.
+
+For those interested in a 3-way stance detection (stance1, stance2, no-stance), we also exported 4448 comments which is a superset of the 3365 stance-taking arguments described above. This file contains additional 1083 posts annotated as having no stance (they might or might not be sarcastic), see `mturk/annotation-task/data/exported-4448-comments-incl-no-stance.tsv` 
 
 #### Reason spans and reason gist
 
