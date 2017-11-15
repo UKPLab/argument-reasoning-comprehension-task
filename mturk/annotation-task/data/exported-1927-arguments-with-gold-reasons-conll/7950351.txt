@@ -134,7 +134,7 @@ why	Premise-I
 my	Premise-I
 library	Premise-I
 has	Premise-I
-publically	Premise-I
+publicly	Premise-I
 displayed	Premise-I
 bookshelves	Premise-I
 at	Premise-I
