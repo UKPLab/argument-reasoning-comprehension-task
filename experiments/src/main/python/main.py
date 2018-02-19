@@ -90,12 +90,41 @@ def __main__():
 
         # simple bidi-lstm model
         # model = get_attention_lstm(word_index_to_embeddings_map, max_len, rich_context=False, dropout=dropout, lstm_size=lstm_size)
+        # Dev accuracy: 0.481012658228
+        # Test accuracy: 0.5
+        # Acc dev
+        # 0.491   0.491   0.481
+        # Acc test
+        # 0.516   0.523   0.500
+
         # simple bidi-lstm model w/ context
         # model = get_attention_lstm(word_index_to_embeddings_map, max_len, rich_context=True, dropout=dropout, lstm_size=lstm_size)
+        # Dev accuracy: 0.48417721519
+        # Test accuracy: 0.513513513514
+        # Acc dev
+        # 0.538   0.484   0.484
+        # Acc test
+        # 0.505   0.525   0.514
+
         # intra-warrant attention
         # model = get_attention_lstm_intra_warrant(word_index_to_embeddings_map, max_len, rich_context=False, dropout=dropout, lstm_size=lstm_size)
+        # Dev accuracy: 0.651898734177
+        # Test accuracy: 0.538288288288
+        # Acc dev
+        # 0.611   0.652   0.652
+        # Acc test
+        # 0.554   0.561   0.538
+
         # intra-warrant w/ context
         model = get_attention_lstm_intra_warrant(word_index_to_embeddings_map, max_len, rich_context=True, dropout=dropout, lstm_size=lstm_size)
+        # Dev accuracy: 0.680379746835
+        # Test accuracy: 0.54954954955
+        # Acc dev
+        # 0.630   0.601   0.680
+        # Acc test
+        # 0.507   0.511   0.550
+
+
 
         model.fit(
             {'sequence_layer_warrant0_input': train_warrant0_list, 'sequence_layer_warrant1_input': train_warrant1_list,
@@ -185,3 +214,5 @@ def print_error_analysis_dev(ids: set) -> None:
 
 if __name__ == "__main__":
     __main__()
+    # how to run
+    # experiments/src/main/python$ KERAS_BACKEND=theano THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32,optimizer_including=cudnn python main.py
