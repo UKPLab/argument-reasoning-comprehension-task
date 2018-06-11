@@ -16,7 +16,7 @@ Use the following citation if you use any of the code or the data set:
   pages     = {1930--1940},
   month     = jun,
   year      = {2018},
-  address   = {New Orleans, Louisiana}
+  address   = {New Orleans, Louisiana},
   url       = {http://aclweb.org/anthology/N18-1175}
 ```
 
