@@ -1,23 +1,23 @@
-# The Argument Reasoning Comprehension Task
+# The Argument Reasoning Comprehension Task: Identification and Reconstruction of Implicit Warrants 
 
 Source code, data, and supplementary materials for our NAACL 2018 paper and for SemEval 2018 shared task.
 Use the following citation if you use any of the code or the data set:
 
 ```
-@InProceedings{habernal.et.al.2018.NAACL.arct,
+@InProceedings{Habernal.et.al.2018.NAACL.ARCT,
   title     = {The Argument Reasoning Comprehension Task: Identification
                and Reconstruction of Implicit Warrants},
   author    = {Habernal, Ivan and Wachsmuth, Henning and
                Gurevych, Iryna and Stein, Benno},
   publisher = {Association for Computational Linguistics},
-  booktitle = {Proceedings of the 2018 Conference of the North American
-               Chapter of the Association for Computational Linguistics:
-               Human Language Technologies},
-  pages     = {(to appear)},
+  booktitle = {Proceedings of the 2018 Conference of the North American Chapter
+               of the Association for Computational Linguistics:
+               Human Language Technologies, Volume 1 (Long Papers)},
+  pages     = {1930--1940},
   month     = jun,
   year      = {2018},
-  address   = {New Orleans, LA, USA}
-  url       = {https://arxiv.org/abs/1708.01425}
+  address   = {New Orleans, Louisiana}
+  url       = {http://aclweb.org/anthology/N18-1175}
 ```
 
 > **Abstract** Reasoning is a crucial part of natural language argumentation. To comprehend an argument, one must analyze its warrant, which explains why its claim follows from its premises. As arguments are highly contextualized, warrants are usually presupposed and left implicit. Thus, the comprehension does not only require language understanding and logic skills, but also depends on common sense. In this paper we develop a methodology for reconstructing warrants systematically. We operationalize it in a scalable crowdsourcing process, resulting in a freely licensed dataset with warrants for 2k authentic arguments from news comments. On this basis, we present a new challenging task, the argument reasoning comprehension task. Given an argument with a claim and a premise, the goal is to choose the correct implicit warrant from two options. Both warrants are plausible and lexically close, but lead to contradicting claims. A solution to this task will define a substantial step towards automatic warrant reconstruction. However, experiments with several neural attention and language models reveal that current approaches do not suffice.
