@@ -16,7 +16,7 @@ deciding	Premise-I
 factor	Premise-I
 isn't	Premise-I
 the	Premise-I
-marajuana	Premise-I
+marijuana	Premise-I
 ,	Premise-I
 but	Premise-I
 the	Premise-I

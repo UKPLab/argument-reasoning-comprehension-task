@@ -21,7 +21,7 @@ do	Premise-I
 so	Premise-I
 amounts	Premise-I
 to	Premise-I
-goverment	Premise-I
+government	Premise-I
 endorsement	Premise-I
 of	Premise-I
 which	Premise-I

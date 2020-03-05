@@ -124,6 +124,11 @@ public class Step9aFinalDataProvider
             Integer incorrectLabelW0orW1;
             Integer incorrectLabelW0orW1Swapped;
 
+            if (container.getOriginalWarrant().equals(container.getAlternativeWarrant())) {
+                throw new IllegalArgumentException();
+            }
+
+
             if (RANDOM.nextBoolean()) {
                 w0 = container.getOriginalWarrant();
                 w1 = container.getAlternativeWarrant();

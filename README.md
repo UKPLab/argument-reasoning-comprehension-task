@@ -1,20 +1,26 @@
-# The Argument Reasoning Comprehension Task
+# The Argument Reasoning Comprehension Task: Identification and Reconstruction of Implicit Warrants 
 
-Source code, data, and supplementary materials.
+Source code, data, and supplementary materials for our NAACL 2018 paper and for SemEval 2018 shared task.
 Use the following citation if you use any of the code or the data set:
 
 ```
-@article{Habernal.et.al.2017.argument.reasoning,
+@InProceedings{Habernal.et.al.2018.NAACL.ARCT,
+  title     = {The Argument Reasoning Comprehension Task: Identification
+               and Reconstruction of Implicit Warrants},
   author    = {Habernal, Ivan and Wachsmuth, Henning and
                Gurevych, Iryna and Stein, Benno},
-  title     = {The Argument Reasoning Comprehension Task},
-  journal   = {arXiv preprint},
-  year      = {2017},
-  url       = {https://arxiv.org/abs/1708.01425}
-}
+  publisher = {Association for Computational Linguistics},
+  booktitle = {Proceedings of the 2018 Conference of the North American Chapter
+               of the Association for Computational Linguistics:
+               Human Language Technologies, Volume 1 (Long Papers)},
+  pages     = {1930--1940},
+  month     = jun,
+  year      = {2018},
+  address   = {New Orleans, Louisiana},
+  url       = {http://aclweb.org/anthology/N18-1175}
 ```
 
-> **Abstract** Reasoning is a crucial part of natural language argumentation. In order to comprehend an argument, one has to reconstruct and analyze its reasoning. As arguments are highly contextualized, most reasoning-related content is left implicit and usually presupposed. Thus, argument comprehension requires not only language understanding and logic skills, but it also heavily depends on common sense. In this article we define a new task, argument reasoning comprehension. Given a natural language argument with a reason and a claim, the goal is to choose the correct implicit reasoning from two options. The challenging factor is that both options are plausible and lexically very close while leading to contradicting claims. To provide an empirical common ground for the task, we propose a complex, yet scalable crowdsourcing process, and we create a new freely licensed dataset based on authentic arguments from news comments. While the resulting 2k high-quality instances are also suitable for other argumentation-related tasks, such as stance detection, argument component identification, and abstractive argument summarization, we focus ont the argument reasoning comprehension task and experiment with several systems based on neural attention or language models. Our results clearly reveal that current methods lack the capability to solve the task.
+> **Abstract** Reasoning is a crucial part of natural language argumentation. To comprehend an argument, one must analyze its warrant, which explains why its claim follows from its premises. As arguments are highly contextualized, warrants are usually presupposed and left implicit. Thus, the comprehension does not only require language understanding and logic skills, but also depends on common sense. In this paper we develop a methodology for reconstructing warrants systematically. We operationalize it in a scalable crowdsourcing process, resulting in a freely licensed dataset with warrants for 2k authentic arguments from news comments. On this basis, we present a new challenging task, the argument reasoning comprehension task. Given an argument with a claim and a premise, the goal is to choose the correct implicit warrant from two options. Both warrants are plausible and lexically close, but lead to contradicting claims. A solution to this task will define a substantial step towards automatic warrant reconstruction. However, experiments with several neural attention and language models reveal that current approaches do not suffice.
 
 * Contact person: Ivan Habernal, habernal@ukp.informatik.tu-darmstadt.de
   * UKP Lab: http://www.ukp.tu-darmstadt.de/
@@ -133,110 +139,13 @@ The output is a single big file `mturk/annotation-task/data/arguments-with-full-
 
 ## Data
 
-**IMPORTANT NOTE** As the Argument Reasoning Comprehension Task has been selected for [SemEval 2018](http://alt.qcri.org/semeval2018/), we cannot publish all data from all annotation tasks yet; the test data have to remain private before the competition (and our pipeline re-creates all gold-standard data from crowd-sourced HITs automatically, including train/dev/test splits).
-Therefore, all annotated data for Step 5 (Alternative warrant) up to Step 8 (Warrant validation) will be made public first after SemEval-2018. All other data up until Step 4 (Reason disambiguation) are however fully available. As a consequence, some steps in the code will throw an exception because of the missing files.
-
-Here's the complete list of deleted files because of SemEval2018:
-
-```
-experiments/src/main/python/data/test.tsv
-mturk/annotation-task/70-alternative-warrants-batch-0001-5000-4235reasons-001-600-task.input
-mturk/annotation-task/70-alternative-warrants-batch-0001-5000-4235reasons-001-600-task.input.success
-mturk/annotation-task/70-alternative-warrants-batch-0001-5000-4235reasons-001-600-task.output.csv
-mturk/annotation-task/70-alternative-warrants-batch-0001-5000-4235reasons-001-600-task.properties
-mturk/annotation-task/70-alternative-warrants-batch-0001-5000-4235reasons-001-600-task.question.xml
-mturk/annotation-task/70-alternative-warrants-batch-0001-5000-4235reasons-001-600-task.worker-stats.csv
-mturk/annotation-task/71-alternative-warrants-batch-0001-5000-4235reasons-001-600-task.input
-mturk/annotation-task/71-alternative-warrants-batch-0001-5000-4235reasons-001-600-task.input.success
-mturk/annotation-task/71-alternative-warrants-batch-0001-5000-4235reasons-001-600-task.output.csv
-mturk/annotation-task/71-alternative-warrants-batch-0001-5000-4235reasons-001-600-task.properties
-mturk/annotation-task/71-alternative-warrants-batch-0001-5000-4235reasons-001-600-task.question.xml
-mturk/annotation-task/71-alternative-warrants-batch-0001-5000-4235reasons-001-600-task.worker-stats.csv
-mturk/annotation-task/72-alternative-warrants-batch-0001-5000-4235reasons-600-1955-task.input
-mturk/annotation-task/72-alternative-warrants-batch-0001-5000-4235reasons-600-1955-task.input.success
-mturk/annotation-task/72-alternative-warrants-batch-0001-5000-4235reasons-600-1955-task.output.csv
-mturk/annotation-task/72-alternative-warrants-batch-0001-5000-4235reasons-600-1955-task.properties
-mturk/annotation-task/72-alternative-warrants-batch-0001-5000-4235reasons-600-1955-task.question.xml
-mturk/annotation-task/72-alternative-warrants-batch-0001-5000-4235reasons-600-1955-task.worker-stats.csv
-mturk/annotation-task/80-aw-validation-batch-all2390-reason-claim-pairs-task.worker-stats.csv
-mturk/annotation-task/80-aw-validation-pilot-task.input
-mturk/annotation-task/80-aw-validation-pilot-task.input.success
-mturk/annotation-task/80-aw-validation-pilot-task.output.csv
-mturk/annotation-task/80-aw-validation-pilot-task.properties
-mturk/annotation-task/80-aw-validation-pilot-task.question.xml
-mturk/annotation-task/80-aw-validation-pilot-task.worker-stats.csv
-mturk/annotation-task/81-001-600aw-validation-batch-0050-2390-reason-claim-pairs-task.input
-mturk/annotation-task/81-001-600aw-validation-batch-0050-2390-reason-claim-pairs-task.input.success
-mturk/annotation-task/81-001-600aw-validation-batch-0050-2390-reason-claim-pairs-task.output.csv
-mturk/annotation-task/81-001-600aw-validation-batch-0050-2390-reason-claim-pairs-task.properties
-mturk/annotation-task/81-001-600aw-validation-batch-0050-2390-reason-claim-pairs-task.question.xml
-mturk/annotation-task/81-001-600aw-validation-batch-0050-2390-reason-claim-pairs-task.worker-stats.csv
-mturk/annotation-task/82-600-1955aw-validation-batch-5342-reason-claim-pairs-task.input
-mturk/annotation-task/82-600-1955aw-validation-batch-5342-reason-claim-pairs-task.input.success
-mturk/annotation-task/82-600-1955aw-validation-batch-5342-reason-claim-pairs-task.output.csv
-mturk/annotation-task/82-600-1955aw-validation-batch-5342-reason-claim-pairs-task.properties
-mturk/annotation-task/82-600-1955aw-validation-batch-5342-reason-claim-pairs-task.question.xml
-mturk/annotation-task/82-600-1955aw-validation-batch-5342-reason-claim-pairs-task.worker-stats.csv
-mturk/annotation-task/90-original-warrant-pilot-task.input
-mturk/annotation-task/90-original-warrant-pilot-task.input.success
-mturk/annotation-task/90-original-warrant-pilot-task.output.csv
-mturk/annotation-task/90-original-warrant-pilot-task.properties
-mturk/annotation-task/90-original-warrant-pilot-task.question.xml
-mturk/annotation-task/90-original-warrant-pilot-task.worker-stats.csv
-mturk/annotation-task/91-original-warrant-batch-0001-5000-batch-0100-0600-task.input
-mturk/annotation-task/91-original-warrant-batch-0001-5000-batch-0100-0600-task.input.success
-mturk/annotation-task/91-original-warrant-batch-0001-5000-batch-0100-0600-task.output.csv
-mturk/annotation-task/91-original-warrant-batch-0001-5000-batch-0100-0600-task.properties
-mturk/annotation-task/91-original-warrant-batch-0001-5000-batch-0100-0600-task.question.xml
-mturk/annotation-task/91-original-warrant-batch-0001-5000-batch-0100-0600-task.worker-stats.csv
-mturk/annotation-task/92-original-warrant-batch-0001-5000-batch-0600-2613-task.input
-mturk/annotation-task/92-original-warrant-batch-0001-5000-batch-0600-2613-task.input.success
-mturk/annotation-task/92-original-warrant-batch-0001-5000-batch-0600-2613-task.output.csv
-mturk/annotation-task/92-original-warrant-batch-0001-5000-batch-0600-2613-task.properties
-mturk/annotation-task/92-original-warrant-batch-0001-5000-batch-0600-2613-task.question.xml
-mturk/annotation-task/92-original-warrant-batch-0001-5000-batch-0600-2613-task.worker-stats.csv
-mturk/annotation-task/95-validation-task-pilot-task.input
-mturk/annotation-task/95-validation-task-pilot-task.input.success
-mturk/annotation-task/95-validation-task-pilot-task.output.csv
-mturk/annotation-task/95-validation-task-pilot-task.properties
-mturk/annotation-task/95-validation-task-pilot-task.question.xml
-mturk/annotation-task/95-validation-task-pilot-task.worker-stats.csv
-mturk/annotation-task/96-validation-task-batch-0001-5000-full-batch-2447-task.input
-mturk/annotation-task/96-validation-task-batch-0001-5000-full-batch-2447-task.input.success
-mturk/annotation-task/96-validation-task-batch-0001-5000-full-batch-2447-task.input.success.old
-mturk/annotation-task/96-validation-task-batch-0001-5000-full-batch-2447-task.output.csv
-mturk/annotation-task/96-validation-task-batch-0001-5000-full-batch-2447-task.properties
-mturk/annotation-task/96-validation-task-batch-0001-5000-full-batch-2447-task.question.xml
-mturk/annotation-task/96-validation-task-batch-0001-5000-full-batch-2447-task.worker-stats.csv
-mturk/annotation-task/97-post-validation.csv
-mturk/annotation-task/97-post-validation.gnumeric
-mturk/annotation-task/97-post-validation2.csv
-mturk/annotation-task/99-upper-bound-task.input
-mturk/annotation-task/99-upper-bound-task.input.success
-mturk/annotation-task/99-upper-bound-task.output.csv
-mturk/annotation-task/99-upper-bound-task.properties
-mturk/annotation-task/99-upper-bound-task.question.xml
-mturk/annotation-task/99-upper-bound-task.worker-stats.csv
-mturk/annotation-task/data/71-alternative-warrants-batch-0001-5000-001-600aw-batch-2390reason-claim-pairs-with-distracting-reasons.xml.gz
-mturk/annotation-task/data/71-alternative-warrants-batch-0001-5000-001-600aw-batch-2390reason-claim-pairs.xml.gz
-mturk/annotation-task/data/72-alternative-warrants-batch-0001-5000-600-1955w-batch-5342reason-claim-pairs-with-distracting-reasons.xml.gz
-mturk/annotation-task/data/72-alternative-warrants-batch-0001-5000-600-1955w-batch-5342reason-claim-pairs.xml.gz
-mturk/annotation-task/data/80-aw-validation-batch-0001-5000-001-600aw-batch-1120reason-claim-pairs.xml.gz
-mturk/annotation-task/data/80-aw-validation-batch-0001-5000-all-batches-3791reason-claim-pairs.xml.gz
-mturk/annotation-task/data/92-original-warrant-batch-0001-5000-2447-good-reason-claim-pairs.xml.gz
-mturk/annotation-task/data/96-original-warrant-batch-0001-5000-final-1970-good-reason-claim-pairs.xml.gz
-mturk/annotation-task/data/experiments/warrants-claims.tsv.gz
-mturk/annotation-task/data/exported-SemEval2018-train-dev-test/test-full.txt
-mturk/annotation-task/data/exported-SemEval2018-train-dev-test/test-only-data.txt
-mturk/annotation-task/data/exported-SemEval2018-train-dev-test/test-only-labels.txt
-mturk/annotation-task/data/final/test.tsv
-mturk/aws-mturk-clt-1.3.1/*
-```
 
 ### Available data
 
 
 All the following files are located in the `mturk/annotation-task/data` folder.
+
+#### Stance detection
 
 `22-stance-batch-0001-5000-all.xml.gz` gold-annotated data after the first step (Stance annotation). The statistics are
 
@@ -250,8 +159,13 @@ No stance (independent of sarcasm)             1083        22%
 Discarded by MACE                               249         5%
  ```
 
-`22-stance-batch-0001-5000-only-with-clear-stances.xml.gz` then contains 2884 non-sarcastic arguments that take one of the two stances. 
+`22-stance-batch-0001-5000-only-with-clear-stances.xml.gz` then contains 2884 non-sarcastic arguments that take one of the two stances in the XML format.
 
+We also provide 3365 stance-taking arguments (including sarcastic ones) exported in a tab-separated plain text format in `mturk/annotation-task/data/exported-3365-stance-taking-arguments.tsv`.
+
+For those interested in a 3-way stance detection (stance1, stance2, no-stance), we also exported 4448 comments which is a superset of the 3365 stance-taking arguments described above. This file contains additional 1083 posts annotated as having no stance (they might or might not be sarcastic), see `mturk/annotation-task/data/exported-4448-comments-incl-no-stance.tsv` 
+
+#### Reason spans and reason gist
 
 `32-reasons-batch-0001-5000-2026args-gold.xml.gz` is the output of the second step (Reason span annotations) and contains 2026 arguments annotated with gold-labeled reason spans.
 Internally, annotations in the XML file are embedded in UIMA format which is serialized into Base64 encoding (maybe not the 'cleanest' solution but working fine). For working with the annotations, DKPro framework is used internally. Nevertheless, the content can be easily accessed by calling `getJCas()` and `setJCas()` in `StandaloneArgument` (see for example `Step2dGoldReasonStatistics`).
@@ -296,6 +210,7 @@ LongSummaryStatistics{count=1927, sum=4294, min=1, average=2,228334, max=6}
 
 Thus for an argument mining system that detects argument components (premises, in this case), there are 1,927 arguments (documents) available with 4,294 premises in total. Each contains 2,23 premise spans on average along with a summarized gist of each premise. These arguments are exported in the UIMA XMI format compatible with [DKPro-Argumentation](https://github.com/dkpro/dkpro-argumentation) together with a CSV file with all relevant meta-data. The files are in `exported-1927-arguments-with-gold-reasons-xmi.tar.bz2` and were produced by `Step3dExportGistToXMIFiles`. These can be easily converted for example into BIO-annotations to perform argument component identification as sequence labeling, see the [example](https://github.com/dkpro/dkpro-argumentation/blob/master/de.tudarmstadt.ukp.dkpro.argumentation.examples/src/main/java/de/tudarmstadt/ukp/dkpro/argumentation/tutorial/ArgumentationCorpusBIOTokenExporter.java) in DKPro-Argumentation. We exported the data in CoNLL format, see below.
 
+#### Reason disambiguation
 
 `61-reason-disambiguation-batch-0001-5000-4235reasons.xml.gz` is the output of reason disambiguation (step 4). Each premise is annotated with one of the following categories:
 

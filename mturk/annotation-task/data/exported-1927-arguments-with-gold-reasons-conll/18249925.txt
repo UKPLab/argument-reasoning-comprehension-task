@@ -27,7 +27,7 @@ are	Premise-I
 more	Premise-I
 intelligent	Premise-I
 and	Premise-I
-knowledgable	Premise-I
+knowledgeable	Premise-I
 than	Premise-I
 the	Premise-I
 beat	Premise-I
