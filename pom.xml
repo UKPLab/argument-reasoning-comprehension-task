@@ -35,7 +35,7 @@
 	</modules>
 
 	<properties>
-		<java.target>11</java.target>
+		<java.target>1.8</java.target>
 		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
 		<dkpro.core.version>1.8.0</dkpro.core.version>
 	</properties>

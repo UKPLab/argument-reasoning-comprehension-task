@@ -25,7 +25,8 @@ import org.apache.uima.fit.factory.JCasFactory;
 import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.xml.sax.SAXException;
-import java.util.Base64;
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -127,9 +128,8 @@ public class StandaloneArgument
         }
 
         try {
-
-            byte[] bytes = Base64.getDecoder().decode(
-                    base64JCas.getBytes("utf-8"));
+            byte[] bytes = new BASE64Decoder()
+                    .decodeBuffer(new ByteArrayInputStream(base64JCas.getBytes("utf-8")));
             JCas jCas = JCasFactory.createJCas();
             XmiCasDeserializer.deserialize(new ByteArrayInputStream(bytes), jCas.getCas());
 
@@ -153,7 +153,7 @@ public class StandaloneArgument
         }
 
         // encode to base64
-        this.base64JCas = Base64.getEncoder().encodeToString(byteOutputStream.toByteArray());
+        this.base64JCas = new BASE64Encoder().encode(byteOutputStream.toByteArray());
     }
 
     public StandaloneArgument(Argument argument, Debate debate)
